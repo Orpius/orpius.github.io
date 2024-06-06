@@ -35,11 +35,17 @@
 
         <link href="assets/images/favicon.ico" type="image/x-icon" rel="icon">
 		 <script src="https://www.google.com/recaptcha/api.js"></script>
-			<script>
-				function onSubmit() {
-					document.getElementById("EarlyAccessForm").submit()
-				}
-			</script>
+         <script>
+             function onSubmit() {
+                 var form = document.getElementById("EarlyAccessForm");
+                 if (form.checkValidity()) {
+                     form.submit();
+                 } else {
+                     grecaptcha.reset();
+                     form.reportValidity();
+                 }
+             }
+         </script>
     </head>
 
     <body>
