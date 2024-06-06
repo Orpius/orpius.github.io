@@ -2710,8 +2710,8 @@ Blog Area Style
 /*================================================
 Contact Area Style
 =================================================*/
-.g-recaptcha {
-	visibility: hidden !important;
+.grecaptcha-badge {
+	visibility: hidden;
 }
 .contact-area {
   background-color: #1a222c;
