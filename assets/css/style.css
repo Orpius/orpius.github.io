@@ -233,6 +233,7 @@ Section Title Style
   font-size: 40px;
   line-height: 1.4;
   padding-bottom:40px;
+
 }
 .section-title.style-2 {
   max-width: 100%;
@@ -1115,7 +1116,7 @@ Hero Area Style
   line-height: 1.2;
   margin-bottom: 18px;
 }
-.banner-content .title p {
+.banner-content .title h2 {
   color: #dae0f5;
 }
 .banner-content .banner-button .demo {
