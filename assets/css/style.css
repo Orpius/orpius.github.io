@@ -1116,8 +1116,11 @@ Hero Area Style
   line-height: 1.2;
   margin-bottom: 18px;
 }
-.banner-content .title h2 {
+.banner-content .title h2, h3, h4 {
   color: #dae0f5;
+}
+.banner-content .title p {
+color: #ffffff;
 }
 .banner-content .banner-button .demo {
   padding: 16px 24px;
