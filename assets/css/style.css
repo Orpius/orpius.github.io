@@ -1098,7 +1098,7 @@ Hero Area Style
 }
 
 .banner-content {
-  max-width: 610px;
+  max-width:610px;
 }
 .banner-content .title {
   margin-bottom: 40px;
@@ -1116,9 +1116,9 @@ Hero Area Style
   line-height: 1.2;
   margin-bottom: 18px;
 }
-.banner-content .title h2, h3, h4 {
-  color: #dae0f5;
-}
+	.banner-content .title h2, h3, h4 {
+		color: #7FDCFC /*#dae0f5;*/
+	}
 .banner-content .title p {
 color: #ffffff;
 }
