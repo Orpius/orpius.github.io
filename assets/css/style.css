@@ -1111,17 +1111,28 @@ Hero Area Style
 }
 .banner-content .title h1 {
   color: #FFF;
-  font-size: 3.75em; /*70px;*/
+  font-size: 3.45em; /*70px;*/
   font-weight: 900;
   line-height: 1.2;
-  margin-bottom: 18px;
+  
 }
-	.banner-content .title h2, h3, h4 {
-		color: #7FDCFC /*#dae0f5;*/
+
+	.banner-content .title h2 {
+		color: #FFF;
+		font-size: 2.75em; /*70px;*/
+		font-weight:400;
+		line-height: 1.2;
+		margin-bottom: 24px;
 	}
-.banner-content .title p {
-color: #ffffff;
-}
+	.banner-content .title h3, h4 {
+		color: #dae0f5; /*#7FDCFC #dae0f5;*/
+		font-size: 1.75em; /*70px;*/
+		font-weight: 400;
+		line-height: 1.2;
+	}
+	.banner-content .title p {
+		color: #dae0f5;
+	}
 .banner-content .banner-button .demo {
   padding: 16px 24px;
   padding-left: 48px;
