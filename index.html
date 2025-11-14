@@ -1,433 +1,230 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		Orpius | Agentic foundation for integrating AI capabilities directly into your applications and systems.
-	</title>
-		<meta name="description" content="Orpius is the platform that makes integrating AI into applications accessible to every software team.
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Integrating LLMs without SDKs, frameworks, or starting from scratch | The Orpius Platform</title>
 
-It enables advanced agentic behavior inside your applications without the burden of building and maintaining your own foundation." />
-		<meta name="keywords" content="workflow automation, multi-agent system, agent orchestration, back-office automation, agent coordination, business process automation, event-driven execution, operational automation, AI agent architecture, non-interactive automation, agentic foundation, agentic developer platform">
-		<!-- CSS Files -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		<link rel="stylesheet" href="assets/css/scrollCue.css">
-		<link rel="stylesheet" href="assets/css/remixicon.css">
-		<link rel="stylesheet" href="assets/css/meanmenu.min.css">
-		<link rel="stylesheet" href="assets/css/odometer.min.css">
-		<link rel="stylesheet" href="assets/css/magnific.popup.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="stylesheet" href="assets/css/responsive.css">
+		<!-- Meta -->
+		<meta name="description" content="Orpius provides a full intelligence layer with built-in agents, tools, execution, orchestration, security, and system-level control as a platform that is ready to integrate with your system.">
+		<meta name="keywords" content="LLM integration into existing applications without rewrite, multi-agent system, Multi-agent communication, agent orchestration, back-office automation, agent coordination, business process automation, event-driven execution, operational automation, AI agent architecture, non-interactive automation, agentic foundation, agentic developer platform, event-driven agents, schedule AI workflows, automating business processes with AI">
 
+		<!-- Open Graph -->
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Your agentic foundation for integrating AI capabilities directly into applications and systems.." />
-		<meta property="og:description" content="Orpius is the platform that makes integrating AI into applications accessible to every software team. It enables advanced agentic behavior inside your applications without the burden of building and maintaining your own foundation." />
+		<meta property="og:title" content="Integrating LLMs without SDKs, frameworks, or starting from scratch." />
+		<meta property="og:description" content="Orpius provides a full intelligence layer with built-in agents, tools, execution, orchestration, security, and system-level control as a platform that is ready to integrate with your system." />
 		<meta property="og:url" content="https://orpius.com/" />
 		<meta property="og:site_name" content="Orpius" />
-		<meta property="og:image" content="https://orpius.com/assets/images/opegraph_images/orpius_platform.jpg" />
+		
 		<meta property="og:image:width" content="1024" />
 		<meta property="og:image:height" content="535" />
 		<meta property="og:image:type" content="image/jpeg" />
+
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Orpius is the platform that makes integrating AI into applications accessible to every software team. It enables advanced agentic behavior inside your applications without the burden of building and maintaining your own foundation." />
-		<meta name="twitter:description" content="and scale." />
+		<meta name="twitter:title" content="Integrating LLMs without SDKs, frameworks, or starting from scratch." />
+		<meta name="twitter:description" content="Orpius provides a full intelligence layer with built-in agents, tools, execution, orchestration, security, and system-level control as a platform that is ready to integrate with your system." />
 		<meta name="twitter:site" content="@orpiusAI" />
 
-		<link href="assets/images/favicon.ico" type="image/x-icon" rel="icon">
-		<script src="https://www.google.com/recaptcha/api.js"></script>
-		<script>
-			function onSubmit() {
-				var form = document.getElementById("EarlyAccessForm");
-				if (form.checkValidity()) {
-					form.submit();
-				} else {
-					grecaptcha.reset();
-					form.reportValidity();
-				}
-			}
-		</script>
-</head>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-<body>
-<!-- Start Navbar Area -->
-<div class="navbar-area style-2">
-	<div class="mobile-responsive-nav">
-		<div class="container">
-			<div class="mobile-responsive-menu">
-				<div class="logo">
-					<a href="index.html">
-						<img src="assets/images/orpius-logo-small.png" class="main-logo" alt="Orpius logo">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+		<link href="assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 
-	<div class="desktop-nav style-2">
-		<div class="container-fluid">
-			<nav class="navbar navbar-expand-md navbar-light">
-				<a class="navbar-brand me-0" href="index.html">
-					<img src="assets/images/orpius-logo.png" class="black-logo" alt="Orpius logo">
+		<!-- CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+		<link href="assets/css/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+
+		<!-- Header / Navbar -->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+			<div class="container align-items-center">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Home">
+				<img src="assets/images/orpius-logo-small.png" alt="Orpius logo" class="img-fluid" >
 				</a>
 
-				<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-					<ul class="navbar-nav m-auto">
-						<li class="nav-item">
-						<a href="#" class="nav-link">Home</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+				aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
 
 
-						<li class="nav-item">
-						<a href="index.html#about" class="nav-link">About</a>
-
-
-						<li class="nav-item">
-						<a href="index.html#product" class="nav-link">Product</a>
-
-
-						<li class="nav-item">
-						<a href="index.html#contact" class="nav-link">Contact</a>
-
+				<!-- Centered nav links -->
+				<div id="mainNav" class="collapse navbar-collapse">
+					<ul class="navbar-nav mx-auto">
+						<!-- Product with submenu
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="product.html" id="productDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">Product</a>
+							<ul class="dropdown-menu dropdown-menu-dark shadow" aria-labelledby="productDropdown">
+								<li><a class="dropdown-item" href="product-development.html">Orpius for Development</a></li>
+								<li><a class="dropdown-item" href="product-productivity.html">Orpius for Productivity</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="product.html">Overview</a></li>
+							</ul>
+						</li> -->
+						<li class="nav-item"><a class="nav-link" href="product.html" data-nav>Product</a></li>
+						<li class="nav-item"><a class="nav-link" href="services.html" data-nav>Services</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html" data-nav>About</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://github.com/Orpius/SDK/blob/main/docs/index.md" data-nav target="_blank">Docs</a></li>
+						<!--<li class="nav-item"><a class="nav-link" href="blog.html" data-nav>Blog</a></li>-->
 					</ul>
-
-					<div class="others-options">
-						<ul>
-
-							<a class="default-btn text-decoration-none" href="#contact">
-								<i class="ri-arrow-right-line"></i>
-								Request Early Access
-							</a>
-
-
-						</ul>
-					</div>
 				</div>
-			</nav>
-		</div>
-	</div>
-</div>
-<!-- End Navbar Area -->
 
-<!-- Start Banner Area -->
-<div class="banner-area">
-	<div class="container-fluid">
-		<div class="row align-items-center" data-cues="slideInUp">
-			<div class="col-lg-6">
-				<div class="banner-content">
-					<div class="title">
-						<h1>
-							The Agentic Platform for Building Intelligent Systems
-						</h1>
-						
-						<!--<div class="flexbox-container" style="display: flex;">-->
-						<div style="padding-right: 10px;">
-							
-							<h3>
-								Secure. Scalable. Built to help developers deliver faster.
-							</h3>
+				<!-- CTA -->
+				<div class="nav-cta d-none d-md-block">
+					<a class="button brand" href="contact.html">Get started</a>
+				</div>
+			</div>
+		</nav>
 
-
+		<main>
+			<!-- Hero -->
+			<section class="hero">
+			  <div class="container text-center">
+				<span class="kicker">Full-Stack Agentic Platform</span>
+				<h1 class="display-2 mb-3">The Agentic Foundation for your Systems</h1>
+				<p class="lead mt-2">The safest and fastest way to integrate LLMs into your applications.</p>
+				<div class="d-flex gap-2 justify-content-center flex-wrap mt-4">
+				  <a class="button brand" href="contact.html">Get Started</a>
+				  <a class="button" href="product.html">Learn More</a>
+				</div>
+			  </div>
+			</section>
+			
+			<!-- Features  -->
+			<section class="pt-7">
+				<div class="container">
+					<div class="row g-4">
+						<div class="col-md-4">
+							<article class="tile p-4 h-100">
+								<h4 class="h4 d-flex align-items-center gap-2">
+									<!--<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 13h4l2-7 4 16 2-9h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>-->
+									No Lock-In
+								</h4>
+								<p class="muted mb-0">No dependency on SDKs or frameworks. No rewrites. Fit it into your current architecture and keep full control over how the system is built and maintained.</p>
+							</article>
 						</div>
-									<!--<div>
-									<h2>For Operations Teams</h2>
-									<p>Automate business tasks with <strong>AI agents</strong> that <strong>work alongside staff</strong> on <strong>multi-step, event-driven processes.</strong></p>
-									</div>
-								</div>-->
-
+						<div class="col-md-4">
+							<article class="tile p-4 h-100">
+								<h4 class="h4 d-flex align-items-center gap-2">
+								<!--<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M16 3v4M8 3v4M3 11h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>-->
+								Model Choice &amp; Control
+								</h4>
+								<p class="muted  mb-0">Use the right model for each task (private, specialised, or cloud). Easy to switch, compare, and experiment without changing application code.</p>
+							</article>
 						</div>
-					<div class="banner-button d-flex align-items-center">
-						<a class="demo text-decoration-none" href="#contact">Request Early Access</a>
+						<div class="col-md-4">
+							<article class="tile p-4 h-100">
+								<h4 class="h4 d-flex align-items-center gap-2">
+								<!--<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>-->
+								Security &amp; Control
+								</h4>
+								<p class="muted  mb-0">Security is built in, including access controls, encryption, secure code execution, tenancy isolation, key management, and operational safeguards.</p>
+							</article>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="banner-image">
-					<img src="assets/images/hero/bg.png" alt="banner-image">
-				</div>
-			</div>
-		</div>
-	</div >
-	<!--<div class="shape">
-		<div class="shape-2">
-			<img src="assets/images/shape/shape-1.png" alt="shape">
-		</div>
-	</div>-->
-</div>
-<!-- End Banner Area -->
-
-<!-- Start Product Area -->
-<div class="product-area style-2 pt-100 pb-75"  id="product">
-	<div class="container">
-		<div class="section-title text-center style-2" data-cue="slideInUp">
-			<span class="d-block">What is the Orpius Platform?</span>
-			<h3>
-				Orpius is a developer-first platform for integrating AI into your applications without changing your architecture or building infrastructure from scratch.
-			</h3><br />
-			<h3>
-				It runs your code securely in isolated environments, orchestrates agentic workflows, and connects directly to your existing systems.
-			</h3>
-			<br />
-			<h3>
-				No new frameworks. No rewrites. Most teams are up and running in a few hours.
-			</h3>
+			</section>
 
 
-
-		</div>
-		<div class="row justify-content-center" data-cues="fadeIn">
-			<div class="col-lg-4 col-md-6">
-				<div class="single-product-item d-flex align-items-center">
-					<div class="icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="80" height="58" viewBox="0 0 80 58" fill="none">
-							<path d="M100.761 0.479282C101.995 11.8276 98.3964 23.4807 91.2334 32.3202C86.2601 38.4516 79.4232 41.7694 72.6445 39.0847C66.6928 49.1903 55.6047 55.7086 43.4218 50.3041C41.6281 49.5069 39.9742 48.4049 38.4834 47.1035C38.297 47.2325 38.1107 47.3615 37.9243 47.4787C27.9194 53.9852 15.818 53.657 5.04436 49.6475C6.75649 51.9336 8.46862 54.2197 10.1924 56.5058C10.9611 57.5257 9.40039 58.4401 8.5618 57.7719C6.52354 56.1423 -0.651108 51.8984 0.047722 48.4986C0.711609 45.263 7.9678 42.8128 10.4021 41.4059C11.5668 40.726 12.6267 42.5431 11.4503 43.2231C10.0293 44.0437 6.36049 45.5678 4.31059 47.1739C12.7897 50.6909 22.3288 51.9219 31.1107 48.6393C32.951 47.9594 34.9659 46.9277 36.9576 45.6264C32.6365 40.9722 30.377 34.3484 32.2056 28.0998C34.1506 21.4174 43.2937 15.5791 48.5349 22.6953C54.0673 30.2217 46.4966 40.6791 40.114 45.8726C47.9409 52.3674 59.8093 50.6089 66.9374 43.7741C68.568 42.2149 69.9773 40.386 71.1537 38.393C70.1287 37.8537 69.1038 37.162 68.0905 36.3179C62.0107 31.2417 56.4433 18.0528 60.9508 10.456C65.5397 2.73019 74.2868 8.93191 76.1853 15.286C78.3283 22.496 77.0704 30.6555 73.5297 37.4786C76.3483 38.5806 79.4698 38.7213 82.5912 37.4082C87.0987 35.4973 90.6627 30.8431 93.1668 26.775C98.1052 18.7679 99.9455 9.81117 99.7708 0.479282C99.7591 -0.177231 100.703 -0.142059 100.761 0.479282ZM48.0224 27.6895C46.7762 19.9285 38.5882 20.2802 35.2804 25.8841C34.0225 28.0177 33.4867 30.679 33.5683 33.1292C33.708 37.3731 35.6997 41.4411 38.5998 44.4775C44.2021 40.3508 49.059 34.1726 48.0224 27.6895ZM74.5081 16.7163C74.2285 15.2978 73.7277 13.9613 73.0056 12.6951C70.5597 8.52159 67.0772 8.09954 62.5581 11.4173C61.3584 13.1758 61.3235 15.8839 61.4516 17.8886C61.7195 22.3905 63.3967 27.3729 65.8659 31.0893C67.4615 33.4926 69.6046 35.5208 72.0389 36.8221C75.1487 30.6672 76.162 23.2228 74.5081 16.7163Z" fill="url(#paint0_linear_431_44)"/>
-							<defs>
-								<linearGradient id="paint0_linear_431_44" x1="101" y1="29" x2="3.45822e-07" y2="29" gradientUnits="userSpaceOnUse">
-									<stop offset="0" stop-color="#00dbde"/>
-									<stop offset="0.499797" stop-color="#00dbde"/>
-									<stop offset="1" stop-color="#fc00ff"/>
-								</linearGradient>
-							</defs>
-						</svg>
-					</div>
-					<div class="content">
-						<h3>
-							Add AI safely, with minimal code.
-						</h3>
-
-						<p>
-							Orpius makes it fast and safe to add AI to your application.
-							It  keeps logic separated, so your core system stays protected.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-product-item d-flex align-items-center">
-					<div class="icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="80" height="58" viewBox="0 0 80 58" fill="none">
-							<path d="M100.761 0.479282C101.995 11.8276 98.3964 23.4807 91.2334 32.3202C86.2601 38.4516 79.4232 41.7694 72.6445 39.0847C66.6928 49.1903 55.6047 55.7086 43.4218 50.3041C41.6281 49.5069 39.9742 48.4049 38.4834 47.1035C38.297 47.2325 38.1107 47.3615 37.9243 47.4787C27.9194 53.9852 15.818 53.657 5.04436 49.6475C6.75649 51.9336 8.46862 54.2197 10.1924 56.5058C10.9611 57.5257 9.40039 58.4401 8.5618 57.7719C6.52354 56.1423 -0.651108 51.8984 0.047722 48.4986C0.711609 45.263 7.9678 42.8128 10.4021 41.4059C11.5668 40.726 12.6267 42.5431 11.4503 43.2231C10.0293 44.0437 6.36049 45.5678 4.31059 47.1739C12.7897 50.6909 22.3288 51.9219 31.1107 48.6393C32.951 47.9594 34.9659 46.9277 36.9576 45.6264C32.6365 40.9722 30.377 34.3484 32.2056 28.0998C34.1506 21.4174 43.2937 15.5791 48.5349 22.6953C54.0673 30.2217 46.4966 40.6791 40.114 45.8726C47.9409 52.3674 59.8093 50.6089 66.9374 43.7741C68.568 42.2149 69.9773 40.386 71.1537 38.393C70.1287 37.8537 69.1038 37.162 68.0905 36.3179C62.0107 31.2417 56.4433 18.0528 60.9508 10.456C65.5397 2.73019 74.2868 8.93191 76.1853 15.286C78.3283 22.496 77.0704 30.6555 73.5297 37.4786C76.3483 38.5806 79.4698 38.7213 82.5912 37.4082C87.0987 35.4973 90.6627 30.8431 93.1668 26.775C98.1052 18.7679 99.9455 9.81117 99.7708 0.479282C99.7591 -0.177231 100.703 -0.142059 100.761 0.479282ZM48.0224 27.6895C46.7762 19.9285 38.5882 20.2802 35.2804 25.8841C34.0225 28.0177 33.4867 30.679 33.5683 33.1292C33.708 37.3731 35.6997 41.4411 38.5998 44.4775C44.2021 40.3508 49.059 34.1726 48.0224 27.6895ZM74.5081 16.7163C74.2285 15.2978 73.7277 13.9613 73.0056 12.6951C70.5597 8.52159 67.0772 8.09954 62.5581 11.4173C61.3584 13.1758 61.3235 15.8839 61.4516 17.8886C61.7195 22.3905 63.3967 27.3729 65.8659 31.0893C67.4615 33.4926 69.6046 35.5208 72.0389 36.8221C75.1487 30.6672 76.162 23.2228 74.5081 16.7163Z" fill="url(#paint0_linear_431_44)"/>
-
-						</svg>
-					</div>
-					<div class="content">
-						<h3>Use the Talent you Already Have</h3>
-
-						<p>
-							Designed so your existing developers can build AI-driven features right away. No retraining. No specialists. Your team. Your stack.
-
-
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-product-item d-flex align-items-center">
-					<div class="icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="80" height="58" viewBox="0 0 80 58" fill="none">
-							<path d="M100.761 0.479282C101.995 11.8276 98.3964 23.4807 91.2334 32.3202C86.2601 38.4516 79.4232 41.7694 72.6445 39.0847C66.6928 49.1903 55.6047 55.7086 43.4218 50.3041C41.6281 49.5069 39.9742 48.4049 38.4834 47.1035C38.297 47.2325 38.1107 47.3615 37.9243 47.4787C27.9194 53.9852 15.818 53.657 5.04436 49.6475C6.75649 51.9336 8.46862 54.2197 10.1924 56.5058C10.9611 57.5257 9.40039 58.4401 8.5618 57.7719C6.52354 56.1423 -0.651108 51.8984 0.047722 48.4986C0.711609 45.263 7.9678 42.8128 10.4021 41.4059C11.5668 40.726 12.6267 42.5431 11.4503 43.2231C10.0293 44.0437 6.36049 45.5678 4.31059 47.1739C12.7897 50.6909 22.3288 51.9219 31.1107 48.6393C32.951 47.9594 34.9659 46.9277 36.9576 45.6264C32.6365 40.9722 30.377 34.3484 32.2056 28.0998C34.1506 21.4174 43.2937 15.5791 48.5349 22.6953C54.0673 30.2217 46.4966 40.6791 40.114 45.8726C47.9409 52.3674 59.8093 50.6089 66.9374 43.7741C68.568 42.2149 69.9773 40.386 71.1537 38.393C70.1287 37.8537 69.1038 37.162 68.0905 36.3179C62.0107 31.2417 56.4433 18.0528 60.9508 10.456C65.5397 2.73019 74.2868 8.93191 76.1853 15.286C78.3283 22.496 77.0704 30.6555 73.5297 37.4786C76.3483 38.5806 79.4698 38.7213 82.5912 37.4082C87.0987 35.4973 90.6627 30.8431 93.1668 26.775C98.1052 18.7679 99.9455 9.81117 99.7708 0.479282C99.7591 -0.177231 100.703 -0.142059 100.761 0.479282ZM48.0224 27.6895C46.7762 19.9285 38.5882 20.2802 35.2804 25.8841C34.0225 28.0177 33.4867 30.679 33.5683 33.1292C33.708 37.3731 35.6997 41.4411 38.5998 44.4775C44.2021 40.3508 49.059 34.1726 48.0224 27.6895ZM74.5081 16.7163C74.2285 15.2978 73.7277 13.9613 73.0056 12.6951C70.5597 8.52159 67.0772 8.09954 62.5581 11.4173C61.3584 13.1758 61.3235 15.8839 61.4516 17.8886C61.7195 22.3905 63.3967 27.3729 65.8659 31.0893C67.4615 33.4926 69.6046 35.5208 72.0389 36.8221C75.1487 30.6672 76.162 23.2228 74.5081 16.7163Z" fill="url(#paint0_linear_431_44)"/>
-
-						</svg>
-					</div>
-					<div class="content">
-						<h3>Extend Orpius to Do What You Need</h3>
-
-						<p>
-
-							Connect your tools, APIs, and services. Agents can use whatever your application depends on.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="background-ellipse"></div>
-</div>
-<!-- End Product Area -->
-
-
-<!-- Start Services Area -->
-<div class="services-area style-2 pb-75" id="about">
-	<div class="container">
-		<div class="section-title text-center style-2" data-cue="slideInUp">
-			<!--<span class="d-block">How it works</span>-->
-			<h3>
-				Orpius gives you the simplicity to get started fast, and the power to build sophisticated systems that go far beyond what existing frameworks can deliver.
-			</h3>
-
-		</div>
-		<!--<div class="row" data-cues="fadeIn">
-		<div class="col-lg-4 col-sm-6">
-			<div class="single-services-info">
-				<h3>
-					<a class="text-decoration-none" href="service-details.html">Initialization</a>
-				</h3>
-				<p>Start by defining outcomes, tasks, and when they should run, either on a schedule or in response to external events.</p>
-
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="single-services-info-flat">
-				<img src="assets/images/hero/how it works.png" class="black-logo" alt="logo">
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="single-services-info">
-				<h3>
-					<a class="text-decoration-none" href="service-details.html">Task Assignment</a>
-				</h3>
-				<p>The platform delegates tasks to both human and AI agent team members, while considering the capabilities of participants and your organisation’s oversight policies.</p>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="single-services-info">
-				<h3>
-					<a class="text-decoration-none" href="service-details.html">Execution</a>
-				</h3>
-				<p>
-					Agents work autonomously where possible and coordinate with humans when needed.
-					For example, a triggered sensor can initiate a video stream analysis, prompt gate closure if needed, notify the appropriate staff, and log the entire event.
-				</p>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="single-services-info">
-				<h3>
-					<a class="text-decoration-none" href="service-details.html">Iteration</a>
-				</h3>
-				<p>Based on a definable schedule, the platform coordinates tasks autonomously without requiring constant human intervention.</p>
-
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6" id="about">
-			<div class="single-services-info">
-				<h3>
-					<a class="text-decoration-none" href="service-details.html">Monitoring and Adjustment</a>
-				</h3>
-				<p>Throughout a process, the Orpius platform monitors performance and task outcomes. If any deviations or inefficiencies are detected, the system dynamically adjusts the operations and reroutes task execution accordingly.</p>
-
-			</div>
-		</div>
-
-	</div>-->
-	</div>
-</div>
-<!-- End Services Area -->
-
-<!-- Start About Area -->
-<div class="about-area style-2 pb-75" id="about">
-	<div class="container">
-		<div class="row align-items-center" data-cue="slideInUp">
-			<div class="col-lg-6">
-				<div class="about-image style-2">
-					<div class="image-1">
-						<img src="assets/images/about/about1.png" alt="about-image">
-					</div>
-					<div class="image-2">
-						<img src="assets/images/about/about2.png" alt="about-image">
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="about-content style-2">
-					<div class="title">
-						<span class="d-block">About us</span>
-						<p id="contact">
-							We believe the path to integrating AI doesn’t need to be complex or costly.
-						</p>
-
-						<p>There’s a radically better way to create, manage, and use AI agents within application, and that’s exactly what Orpius is about. Just as no one builds their own database engine today, agentic foundations should be just as ready to use.
-						</p>
-						<p>
-							With Orpius, developers can bring agentic AI into their applications quickly, and with the technology they already know.
-						</p>
-
-						<p>Our experience spans years of crafting systems and delivering enterprise-ready products across industries. </p>
-					</div>
-
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- End About Area -->
-
-
-<!-- Start Contact Area -->
-<div class="contact-area">
-	<div class="container">
-		<div class="contact-info-area">
-			<div class="row align-items-center" data-cues="fadeIn">
-
-				<div class="single-contact-info">
-					<div class="contact-submit align-items-center">
-						<h3>Be part of the journey!&nbsp;&nbsp;Request Early Access.</h3>
-
-
-						<form action="https://formspree.io/f/xjvnddpd" id="EarlyAccessForm" method="POST">
-							<div class="row">
-
-								<div class="single-contact-info">
-									<div class="form-group">
-										<input name="subject" type="hidden" value="Orpius Platform: Request Early Access"/>
-										<input type="email" name="email" class="form-control" placeholder="Email*" required>
-
-										<textarea class="form-control textarea" name="message" placeholder="Optional Comments" rows="3"></textarea>
-
-
-										<button class="g-recaptcha" id="validate" data-sitekey="6Ld12_EpAAAAALI3Nlq0W0AHn3-Btch43juk-5S_" 
-										        data-callback="onSubmit" data-action="submit" type="submit">Submit</button>
-
-										<span>We never disclose your personal information to anyone. We take your privacy seriously.</span>
-									</div>
-									<span style="font-size:12px">
-										This site is protected by reCAPTCHA and the Google
-										<a href="https://policies.google.com/privacy">Privacy Policy</a> and
-										<a href="https://policies.google.com/terms">Terms of Service</a> apply.
-									</span>
-								</div>
-							</div>
-						</form>
-
-					</div>
+			<!-- Why Orpius -->
+			<section class="pt-7">
+			  <div class="container">
+				<div class="text-left mb-5 section-header">
+				  <span class="kicker">Why Orpius</span>
+				  <h1 class="mt-3">Fits into your system. You don’t have to change how you build.</h1>
+				  <p class="text-uppercase lead text-muted mb-2">It is a production platform. Not a framework.</p>
+				  <p class="section-description mx-auto">
+					Orpius integrates directly with your existing applications, tools, and infrastructure. The orchestration, security, and capabilities are already built in so you can start using AI operationally without changing how your systems work today.
+				  </p>
 				</div>
 
+				<div class="row g-4">
+				  <div class="col-md-4">
+					<article class="tile p-4 h-100">
+					  <span class="text-info text-uppercase small">Built to Fit Your Systems</span>
+					  <h3 class="h6 mt-2">Connects directly to your applications and data</h3>
+					  <p class="muted mb-0">No dependency on agent frameworks. Orpius sits alongside your systems, not replacing them. You can change model providers without rewriting your application code.</p>
+					</article>
+				  </div>
+				  <div class="col-md-4">
+					<article class="tile p-4 h-100">
+					  <span class="text-info text-uppercase small">Built for Your Team</span>
+					  <h3 class="h6 mt-2">Use the talent you already have</h3>
+					  <p class="muted mb-0">Designed so your team can build AI driven features right away. No retraining. No specialists. Use your own code, your own tools, your own stack.</p>
+					</article>
+				  </div>
+				  <div class="col-md-4">
+					<article class="tile p-4 h-100">
+					  <span class="text-info text-uppercase small">Built for Scale</span>
+					  <h3 class="h6 mt-2">Extend Orpius to do what you need</h3>
+					  <p class="muted mb-0">Orpius has a rich set of tools and capabilities built-in. You can also define your own tools, so your systems can interact with your internal services directly and securely.</p>
+					</article>
+				  </div>
+				</div>
+			  </div>
+			</section>
+
+
+			<section class="pt-7">
+				<div class="container">
+					<div class="text-left mb-5 section-header" >
+						<span class="kicker">What you build with Orpius</span>
+						<h1 class="mt-3">Systems That Respond, Collaborate, and Keep Data Private</h1>
+						<p class="section-description mx-auto" >With Orpius you can build adaptive systems that respond to events or run on schedules and use LLMs for next-step decisions. You can use Orpius agents to collaborate across regions and installations while keeping data and internal logic private.</p>
+					</div>
+
+					<div class="row g-4">
+						<div class="col-md-4">
+							<article class="tile p-4 h-100">
+								<span class="text-info text-uppercase small">Collaborate Across Agents</span>
+								<h3 class="h6 mt-2">Keep data local and private.</h3>
+								<p class="muted mb-0">Orpius brings the LLM to where the data lives, so organisations retain their enterprise context and privacy.</p>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="tile p-4 h-100">
+								<span class="text-info text-uppercase small">Build Systems That Adapt</span>
+								<h3 class="h6 mt-2">Add flexibility to your workflows.</h3>
+								<p class="muted mb-0">Orpius provides built-in scheduling, event handling, and workflow control. You can design systems that respond to events and conditions so processes can change direction while they run.</p>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="tile p-4 h-100">
+								<span class="text-info text-uppercase small">Build New or Extend Existing Systems</span>
+								<h3 class="h6 mt-2">Orpius fits into your current architecture.</h3>
+								<p class="muted mb-0">It provides a ready-to-use environment designed for rapid development, flexibility, and security. You can extend your existing systems without replacing them or use Orpius as the foundation for new projects.,</p>
+							</article>
+						</div>
+					</div>	
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<section class="cta-section">
+			  <div class="container">
+				<h1 class="mb-3">Ready to Get Started?</h1>
+				<p class="muted mb-4">Join developers building the next generation of adaptive systems.</p>
+				<a href="contact.html" class="button brand">Contact Us</a>
+			  </div>
+			</section>
+		</main>
+
+		<footer role="contentinfo">
+			<div class="container">
+				<small class="muted">© 2025 Orpius. All rights reserved.</small>
 			</div>
-		</div>
-	</div>
-</div>
+		</footer>
 
-<!-- End Contact Area -->
-
-
-<!-- Start Copyright Area -->
-<div class="copyright-area">
-	<div class="container">
-		<div class="copyright-content text-center" data-cue="slideInUp">
-			<p>Copyright @ 2025 <strong>Orpius</strong> All Rights Reserved</p>
-		</div>
-	</div>
-</div>
-<!-- End Copyright Area -->
-
-<!-- Back to Top -->
-<div class="go-top">
-	<i class="ri-arrow-up-line"></i>
-</div>
-
-
-<!-- Js Files -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/meanmenu.min.js"></script>
-<script src="assets/js/scrollCue.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.magnific.popup.js"></script>
-<script src="assets/js/custom.js"></script>
-</body>
+	  <!-- Bootstrap JS -->
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>
