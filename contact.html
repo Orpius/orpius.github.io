@@ -35,10 +35,19 @@
 	<link href="assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
-		function onSubmit(token) {
-			document.getElementById("RequestAccessForm").submit();
+		var form = document.getElementById("RequestAccessForm");
+		if (form.checkValidity()) {
+			form.submit();
+		} else {
+			grecaptcha.reset();
+			form.reportValidity();
 		}
 	</script>
+	<!---< script >
+			function onSubmit(token) {
+				document.getElementById("RequestAccessForm").submit();
+			}
+	</script>-->
 
 	<!-- CSS -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -95,7 +104,7 @@
 									<div class="col-12">
 										<input name="subject" type="hidden" value="Orpius Platform: Request Access"/>
 										<label class="form-label muted">Email</label>
-										<input type="email" class="form-control"  name="email"   required />
+										<input type="email" class="form-control" name="email" required />
 									</div>
 									<div class="col-12">
 										<label class="form-label muted">Comments (optional)</label>
