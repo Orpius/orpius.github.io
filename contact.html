@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XPFMGFXVT2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-XPFMGFXVT2');
+	</script>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Integrating LLMs without frameworks, SDKs or starting from scratch | The Orpius Platform</title>
@@ -35,22 +44,21 @@
 	<link href="assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
-        function onSubmit() {
-            var form = document.getElementById("RequestAccessForm");
-            if (form.checkValidity()) {
-                form.submit();
-            } else {
-                grecaptcha.reset();
-                form.reportValidity();
-            }
-        }
+		function onSubmit() {
+			var form = document.getElementById("RequestAccessForm");
+			if (form.checkValidity()) {
+				form.submit();
+			} else {
+				grecaptcha.reset();
+				form.reportValidity();
+			}
+		}
 	</script>
 	<!---< script >
 			function onSubmit(token) {
 				document.getElementById("RequestAccessForm").submit();
 			}
 	</script>-->
-
 	<!-- CSS -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
