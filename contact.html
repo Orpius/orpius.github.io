@@ -105,42 +105,118 @@
 			</div>
 		</nav>
 		<main>
-			<!-- contact-->
-			<section id="contact" class="py-7">
+			<section class="pt-7">
 				<div class="container">
-					<div class="card panel p-4">
-						<div class="row g-4">
-							<div class="col-12 col-lg-6">
-								<form action="https://formspree.io/f/xjvnddpd" id="RequestAccessForm" method="POST" class="row gy-3" >
-									<div class="col-12">
-										<input name="subject" type="hidden" value="Orpius Platform: Request Access"/>
-										<label class="form-label muted">Email</label>
-										<input type="email" class="form-control" name="email" required />
-									</div>
-									<div class="col-12">
-										<label class="form-label muted">Comments (optional)</label>
-										<textarea class="form-control" name="message"  rows="4" ></textarea>
-									</div>
-									<div class="col-12">
-										<button class="button brand g-recaptcha" id="validate" data-sitekey="6Ld12_EpAAAAALI3Nlq0W0AHn3-Btch43juk-5S_" 
-										data-callback="onSubmit" data-action="submit" type="submit">Submit &#8594;</button>
-									</div>
-									<span style="font-size:12px" class="muted">We never disclose your personal information to anyone. We take your privacy seriously.
-										This site is protected by reCAPTCHA and the Google
-										<a href="https://policies.google.com/privacy">Privacy Policy</a> and
-										<a href="https://policies.google.com/terms">Terms of Service</a> apply.
-									</span>
-								</form>
+					<div class="row align-items-center g-4">
+						<div class="col-12 col-lg-7">
+
+							<h1 class="section-title mb-3">Try Orpius</h1>
+							<h4>
+								Test drive Orpius within our multi-tenant instance.
+
+							</h4>
+							<p class="muted lead">
+								The trial version is provided for evaluation only and is not intended or supported for
+								production workloads. If you would like a dedicated single-tenant production instance for your
+								organization, please request it using the contact form on this page. 
+							</p>
+							<p class="lead">For questions, feedback, please use our public GitHub Discussions. For bugs and technical issues, please use <a  href="https://github.com/Orpius/SDK/issues" target="_blank">GitHub Issues.</a></p>
+
+							<div class="d-flex gap-2">
+								<!--<a class="button brand" href="#contact">Talk to us</a>-->
+								<a class="button brand" href="https://sq37ts3m52w6ame63hch7lntot.app.orpius.com/console">Download Orpius Console</a>
+								<a class="button outline" href="https://github.com/Orpius/SDK/blob/main/docs/index.md">Docs</a>
+								<a class="button outline" href="https://github.com/Orpius/SDK/discussions">Discussions</a>
+
 							</div>
-							<div class="col-12 col-lg-6">
-								<div class="panel-inset p-4 h-100">
-									<h1>Let's get your system running.</h1>
-									<p>Request access and we’ll help you put Orpius into practice.</p>
+							
+
+
+
+
+
+						</div>
+						<div class="col-12 col-lg-5 pt-5">
+							<div class="card panel p-3">
+								<div class="panel-inset p-4">
+
+									<h4>What you need to get started</h4>
+
+
+
+									<ol class="mb-0 small">
+										<li>
+											<h6>Orpius Console</h6>
+											<ul><li>A lightweight desktop client for configuring everything from models to agents and tools</li></ul>
+
+										</li>
+										<li>
+											<h6>Access to your own LLM provider(s)</h6>
+											<ul><li>Orpius currently supports Google Gemini, OpenAI, Azure OpenAI, with more providers to follow. (Note: Google offers free access to its <a href="https://aistudio.google.com/api-keys">Gemini API</a>)</li></ul>
+										</li>
+
+
+									</ol>
+									<hr class="hr-line" />
+									<h3>Trial Limitations</h3>
+									<ul class="mb-0 small">
+										<li>The trial is shared and capacity-limited</li>
+										<li>The trial stack may be reset or removed without notice</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
+
+
+
+							</div>
+						</div>
+			
+</section>
+
+
+			<!-- contact-->
+			<section id="contact" class="py-5 ">
+				<div class="container">
+						<div class="card panel p-4">
+							<div class="row g-4">
+								<div class="col-12 col-lg-6">
+									<form action="https://formspree.io/f/xjvnddpd" id="RequestAccessForm" method="POST" class="row gy-3">
+										<div class="col-12">
+											<input name="subject" type="hidden" value="Orpius Platform: Request Access" />
+											<label class="form-label muted">Email</label>
+											<input type="email" class="form-control" name="email" required />
+										</div>
+										<div class="col-12">
+											<label class="form-label muted">Comments (optional)</label>
+											<textarea class="form-control" name="message" rows="4"></textarea>
+										</div>
+										<div class="col-12">
+											<button class="button brand g-recaptcha" id="validate" data-sitekey="6Ld12_EpAAAAALI3Nlq0W0AHn3-Btch43juk-5S_"
+													data-callback="onSubmit" data-action="submit" type="submit">
+												Submit &#8594;
+											</button>
+										</div>
+										<span style="font-size:12px" class="muted">
+											We never disclose your personal information to anyone. We take your privacy seriously.
+											This site is protected by reCAPTCHA and the Google
+											<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+											<a href="https://policies.google.com/terms">Terms of Service</a> apply.
+										</span>
+									</form>
+								</div>
+								<div class="col-12 col-lg-6">
+									<div class="panel-inset p-4 h-100">
+										<h1>Let's get your system running.</h1>
+										<p>
+											Get in touch with us, ask questions, or request a dedicated
+											production deployment of Orpius.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+</div>
 			</section>
 		</main>
 		<footer role="contentinfo">
