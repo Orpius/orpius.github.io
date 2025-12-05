@@ -120,16 +120,29 @@
 								production workloads. If you would like a dedicated single-tenant production instance for your
 								organization, please request it using the contact form on this page.
 							</p>
-							<p class="lead">For questions, feedback, please use our public GitHub Discussions. For bugs and technical issues, please use <a href="https://github.com/Orpius/SDK/issues" target="_blank">GitHub Issues.</a></p>
-
-							<div class="d-flex gap-3 pt-5">
+							
+							<p class="lead">
+								Download the Orpius Console for Windows using the button below.
+								After installation, select Launch Orpius Console to open the app.
+							</p>
+							<div class="d-flex gap-3 pt-2">
 								<!--<a class="button brand" href="#contact">Talk to us</a>-->
-								<a class="button brand" href="https://sq37ts3m52w6ame63hch7lntot.app.orpius.com/console" target="_blank">Download Orpius Console</a>
-								<a class="button outline" href="https://github.com/Orpius/SDK/blob/main/docs/index.md" target="_blank">Docs</a>
-								<a class="button outline" href="https://github.com/Orpius/SDK/discussions" target="_blank">Discussions</a>
+								<a class="button brand" href="https://sq37ts3m52w6ame63hch7lntot.app.orpius.com/api/v1/server-version/console/download?channel=win-x64">Download Orpius Console</a>
+								<a class="button brand" href="orpius://Main?host=https%3A%2F%2Fsq37ts3m52w6ame63hch7lntot.app.orpius.com">Launch Orpius Console</a>
 
 							</div>
+							<div>
+								<p class="lead pt-5">For questions, feedback, please use our public GitHub Discussions. For bugs and technical issues, please use <a href="https://github.com/Orpius/SDK/issues" target="_blank">GitHub Issues.</a></p>
 
+								
+                                <div class="d-flex gap-3 pt-2">
+                                    <a class="button outline" href="https://github.com/Orpius/SDK/discussions" target="_blank">Discussions</a>
+
+                                    <a class="button outline" href="https://github.com/Orpius/SDK/blob/main/docs/index.md" target="_blank">Docs</a>
+
+                                </div>
+								
+							</div>
 
 						</div>
 						<div class="col-12 col-lg-5 pt-5">
@@ -172,53 +185,48 @@
 			<!-- contact-->
 			<section id="contact" class="py-7">
 				<div class="container">
-					<div class="card panel p-4">
-						<div class="row g-4">
-							<div class="col-12 col-lg-6">
-								<div class="panel-inset p-4 h-100">
-									<h1>Let’s get your system running.</h1>
-									<p>
-										Get in touch with us, ask questions, or request a dedicated
-										production deployment of Orpius.
-									</p>
-								</div>
-							</div>
-							<div class="col-12 col-lg-6">
-								<form action="https://formspree.io/f/xjvnddpd" id="RequestAccessForm" method="POST" class="row gy-3">
-									<div class="col-12">
-										<input name="subject" type="hidden" value="Orpius Platform: Request Access" />
-										<label class="form-label muted">Email</label>
-										<input type="email" class="form-control" name="email" required />
-									</div>
-									<div class="col-12">
-										<label class="form-label muted">Comments (optional)</label>
-										<textarea class="form-control" name="message" rows="4"></textarea>
-									</div>
-									<div class="col-12">
-										<button class="button brand g-recaptcha" id="validate" data-sitekey="6Ld12_EpAAAAALI3Nlq0W0AHn3-Btch43juk-5S_"
-												data-callback="onSubmit" data-action="submit" type="submit">
-											Submit
-										</button>
-									</div>
-									<span style="font-size:12px" class="muted">
-										We never disclose your personal information to anyone. We take your privacy seriously.
-										This site is protected by reCAPTCHA and the Google
-										<a href="https://policies.google.com/privacy">Privacy Policy</a> and
-										<a href="https://policies.google.com/terms">Terms of Service</a> apply.
-									</span>
-								</form>
-							</div>
-
-						</div>
+                    <div class="card panel p-4">
+                        <div class="panel-inset p-4 h-100">
+                            <h1>Let's get your system running.</h1>
+                            <p class="lead">
+                                Get in touch with us, ask questions, or request a dedicated
+                                production deployment of Orpius.
+                            </p>
+                            <div style="max-width: 500px; width: 100%;">
+                                <form action="https://formspree.io/f/xjvnddpd" id="RequestAccessForm" method="POST" class="row gy-3">
+                                    <div class="col-12">
+                                        <input name="subject" type="hidden" value="Orpius Platform: Request Access" />
+                                        <label class="form-label muted">Email</label>
+                                        <input type="email" class="form-control" name="email" required />
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label muted">Comments</label>
+                                        <textarea class="form-control" name="message" rows="4"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="button brand g-recaptcha" id="validate" data-sitekey="6Ld12_EpAAAAALI3Nlq0W0AHn3-Btch43juk-5S_"
+                                                data-callback="onSubmit" data-action="submit" type="submit">
+                                            Submit
+                                        </button>
+                                    </div>
+                                    <span style="font-size:12px" class="muted">
+                                        We never disclose your personal information to anyone. We take your privacy seriously.
+                                        This site is protected by reCAPTCHA and the Google
+                                        <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                                        <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+                                    </span>
+                                </form>
+                            </div">
+                        </div>
 					</div>
 				</div>
 			</section>
-		</main>
-		<footer role="contentinfo">
-			<div class="container">
-				<small class="muted">&#169; 2025 Orpius. All rights reserved.</small>
-			</div>
-		</footer>
-		<script src="assets/js/bootstrap.bundle.min.js"></script>
-	</body>
-</html>
+			</main>
+			<footer role="contentinfo">
+				<div class="container">
+					<small class="muted">&#169; 2025 Orpius. All rights reserved.</small>
+				</div>
+			</footer>
+			<script src="assets/js/bootstrap.bundle.min.js"></script>
+		</body>
+	</html>
