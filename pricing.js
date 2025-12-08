@@ -11,21 +11,21 @@ class PricingManager {
             },
             USD: {
                 symbol: "$",
-                single: 499,
-                hosted: 1999,
-                onsite: 9900
+                single: 449,
+                hosted: 1899,
+                onsite: 8900
             },
             EUR: {
                 symbol: "€",
-                single: 499,
-                hosted: 1999,
-                onsite: 9900
+                single: 479,
+                hosted: 1949,
+                onsite: 9400
             },
             GBP: {
                 symbol: "£",
-                single: 499,
-                hosted: 1999,
-                onsite: 9900
+                single: 429,
+                hosted: 1749,
+                onsite: 8400
             }
         };
 
