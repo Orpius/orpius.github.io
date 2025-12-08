@@ -175,10 +175,10 @@
 		filter: brightness(1.06); 
 	}
 
-	.button:focus-visible {
-		outline: none;
-		box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 35%, transparent); 
-	}
+		.button:focus-visible {
+			outline: none;
+			box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 35%, transparent);
+		}
 
 	.button.brand {
 		background: linear-gradient(135deg, var(--brand), var(--brand-2)); 
