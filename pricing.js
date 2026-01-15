@@ -5,25 +5,25 @@ class PricingManager {
         this.pricingData = {
             CHF: {
                 symbol: "CHF",
-                single: 199,
+                single: 299,
                 hosted: 1999,
                 onsite: 9900
             },
             USD: {
                 symbol: "$",
-                single: 149,
+                single: 249,
                 hosted: 1899,
                 onsite: 8900
             },
             EUR: {
                 symbol: "€",
-                single: 179,
+                single: 279,
                 hosted: 1949,
                 onsite: 9400
             },
             GBP: {
                 symbol: "£",
-                single: 129,
+                single: 229,
                 hosted: 1749,
                 onsite: 8400
             }
