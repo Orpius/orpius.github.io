@@ -1,483 +1,310 @@
-﻿<!DOCTYPE html>
-<html lang="en-US">
+﻿<!doctype html>
+<html lang="en" data-bs-theme="dark">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		Orpius | Turn business inputs into structured outputs automatically — on events and schedules
-	</title>
-	<meta name="description" content="Orpius turns real-world inputs into structured outputs automatically. It runs generative AI on events and schedules, calls your systems and tools, and writes results back — without manual prompting." />
-	<meta name="keywords" content="workflow automation, multi-agent system, agent orchestration, back-office automation, agent coordination, business process automation, event-driven execution, operational automation, AI agent architecture, non-interactive automation, agentic foundation, agentic developer platform">
-	<!-- CSS Files -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="assets/css/scrollCue.css">
-	<link rel="stylesheet" href="assets/css/remixicon.css">
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
-	<link rel="stylesheet" href="assets/css/odometer.min.css">
-	<link rel="stylesheet" href="assets/css/magnific.popup.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/responsive.css">
-
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Turn business inputs into structured outputs — automatically, on events and schedules" />
-	<meta property="og:description" content="Orpius runs generative AI on events and schedules to create summaries, reports, tickets and documents — integrating with your existing systems and writing results back automatically." />
-	<meta property="og:url" content="https://orpius.com/" />
-	<meta property="og:site_name" content="Orpius" />
-	<meta property="og:image" content="https://orpius.com/assets/images/opegraph_images/orpius_platform.jpg" />
-	<meta property="og:image:width" content="1024" />
-	<meta property="og:image:height" content="535" />
-	<meta property="og:image:type" content="image/jpeg" />
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Non-interactive generative AI: from inputs to structured outputs, on events and schedules" />
-	<meta name="twitter:description" content="Orpius plugs into your systems, triggers on events and schedules, and delivers structured outputs without manual prompts." />
-	<meta name="twitter:site" content="@orpiusAI" />
-
-	<link href="assets/images/favicon.ico" type="image/x-icon" rel="icon">
-	<script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPFMGFXVT2"></script>
     <script>
-        function onSubmit() {
-            var form = document.getElementById("EarlyAccessForm");
-            if (form.checkValidity()) {
-                form.submit();
-            } else {
-                grecaptcha.reset();
-                form.reportValidity();
-            }
-        }
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XPFMGFXVT2');
     </script>
-    <style>
-        .about-area.style-2 p,
-        .services-area.style-2 p,
-        .section-title.style-2 p {
-            color: rgba(255,255,255,0.92);   /* was ~0.7–0.8 in many themes */
-            line-height: 1.6;
-        }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bringing AI into your systems | The Orpius Platform</title>
 
-        .about-area.style-2 .single-services-info h3,
-        .about-area.style-2 .single-services-info h3 a,
-        .services-area.style-2 .single-services-info h3,
-        .services-area.style-2 .single-services-info h3 a,
-        .product-area.style-2 .single-services-info h3,
-        .product-area.style-2 .single-services-info h3 a {
-            color: rgba(255,255,255,0.98) !important;
-        }
-    </style>
+    <!-- Meta -->
+    <meta name="description" content="Orpius gives you the full intelligence layer, already built and ready to safely integrate with your system.">
+    <meta name="keywords" content=".NET Agent Framework, AI integration, LLM integration into existing applications, without rewrite, multi-agent system, Multi-agent communication, agent orchestration, back-office automation, agent coordination, business process automation, event-driven execution, operational automation, AI agent architecture, non-interactive automation, agentic foundation, agentic developer platform, event-driven agents, schedule AI workflows, automating business processes with AI">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bringing AI into your systems | The Orpius Platform" />
+    <meta property="og:description" content="rpius gives you the full intelligence layer, already built and ready to safely integrate with your system." />
+    <meta property="og:url" content="https://orpius.com/" />
+    <meta property="og:site_name" content="Orpius" />
+    <meta property="og:image" content="https://orpius.com/assets/images/opengraph_images/orpius_platform.jpg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="535" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bringing AI into your systems | The Orpius Platform" />
+    <meta name="twitter:description" content="Orpius gives you the full intelligence layer, already built and ready to safely integrate with your system." />
+    <meta name="twitter:site" content="@orpiusAI" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="assets/css/style.css" rel="stylesheet" />
 </head>
-
 <body>
-	<!-- Start Navbar Area -->
-	<div class="navbar-area style-2">
-		<div class="mobile-responsive-nav">
-			<div class="container">
-				<div class="mobile-responsive-menu">
-					<div class="logo">
-						<a href="index.html">
-							<img src="assets/images/orpius-logo-small.png" class="main-logo" alt="Orpius logo">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="desktop-nav style-2">
-			<div class="container-fluid">
-				<nav class="navbar navbar-expand-md navbar-light">
-					<a class="navbar-brand me-0" href="index.html">
-						<img src="assets/images/orpius-logo.png" class="black-logo" alt="Orpius logo">
-					</a>
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Home">
+                <img src="assets/images/orpius-logo-small.png" alt="Orpius logo" class="img-fluid">
+            </a>
 
-					<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-						<ul class="navbar-nav m-auto">
-							<li class="nav-item">
-								<a href="#" class="nav-link">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-							<li class="nav-item">
-								<a href="index.html#about" class="nav-link">About</a>
 
-							<li class="nav-item">
-								<a href="index.html#product" class="nav-link">Product</a>
+            <!-- Centered nav links -->
+            <div id="mainNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <!-- Product with submenu
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="product.html" id="productDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Product</a>
+                        <ul class="dropdown-menu dropdown-menu-dark shadow" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="product-development.html">Orpius for Development</a></li>
+                            <li><a class="dropdown-item" href="product-productivity.html">Orpius for Productivity</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="product.html">Overview</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item"><a class="nav-link" href="product.html" data-nav>Platform</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-nav>Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html" data-nav>Research</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="product.html" id="productDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Company</a>
+                        <ul class="dropdown-menu dropdown-menu-dark shadow" aria-labelledby="productDropdown">
+                            <li><a class="dropdown-item" href="about.html">About</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/Orpius/SDK/blob/main/docs/index.md" data-nav target="_blank">Docs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html" data-nav>Pricing</a></li>
+                </ul>
+            </div>
 
-							<li class="nav-item">
-								<a href="index.html#contact" class="nav-link">Contact</a>
-						</ul>
+            <!-- CTA -->
+            <div class="nav-cta d-none d-md-block">
+                <a class="button brand" href="get-started.html">Get Orpius</a>
+            </div>
+        </div>
+    </nav>
 
-						<div class="others-options">
-							<ul>
-								<a class="default-btn text-decoration-none" href="#contact">
-									<i class="ri-arrow-right-line"></i>
-									Request Early Access
-								</a>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<!-- End Navbar Area -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container text-center">
+                <span class="kicker">The Autonomous Execution Engine</span>
+                <h1 class="display-2 mb-3">Your Team's Platform for <br>Getting Work Done.</h1>
+                <p class="lead mt-2">Orpius is the first mission-critical platform where .NET-powered AI agents execute end-to-end tasks on a schedule or when triggered by something new.</p>
 
-	<!-- Start Banner Area -->
-	<div class="banner-area">
-		<div class="container-fluid">
-			<div class="row align-items-center" data-cues="slideInUp">
-				<div class="col-lg-6">
-					<div class="banner-content">
-						<div class="title">
-							<h1>
-								The Agentic Platform for Building Intelligent Systems
-							</h1>
+                <div class="d-flex gap-4 justify-content-center flex-wrap mt-4">
+                    <a class="button brand" href="get-started.html">Get Orpius</a>
+                    <a class="button" href="product.html">Learn More</a>
+                </div>
 
-							<div style="padding-right: 10px;">
-								<h3>
-									Turn business inputs into structured outputs automatically — on events and schedules.
-								</h3>
-								<p style="margin-top: 1rem; font-size: 1.15rem;">
-									When something happens — a webcam detects motion, a file arrives, a sensor changes state, or a request comes in —
-									Orpius interprets it, produces the structured result you care about, and performs the follow-up actions securely.
-								</p>
-							</div>
-						</div>
-						<div class="banner-button d-flex align-items-center">
-							<a class="demo text-decoration-none" href="#contact">Request Early Access</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="banner-image">
-						<img src="assets/images/hero/bg.png" alt="banner-image">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Banner Area -->
 
-	<div class="about-area style-2 pb-75" id="how-it-works">
-		<div class="container">
-			<div class="section-title text-center style-2" data-cue="slideInUp">
-				<h3>How Orpius Works</h3>
-				<p style="max-width: 780px; margin: 0 auto; margin-top: 1rem;">
-					Orpius takes real-world inputs from your systems, turns them into structured data,
-					and triggers the next action automatically — so work moves forward without waiting on people.
-				</p>
-			</div>
+            </div>
+        </section>
 
-			<div class="row text-center mt-4" data-cues="fadeIn">
-				<div class="col-lg-3 col-sm-6 mb-4">
-					<h4>1. Something happens</h4>
-					<p>Webhook, sensor event, camera feed signal, file upload, email, or scheduled time.</p>
-				</div>
-				<div class="col-lg-3 col-sm-6 mb-4">
-					<h4>2. Orpius interprets it</h4>
-					<p>Extracts meaning and key fields — turning messy or raw input into structured output.</p>
-				</div>
-				<div class="col-lg-3 col-sm-6 mb-4">
-					<h4>3. Produces the result you need</h4>
-					<p>JSON, DB record, status update, decision, summary, or classification — clean and usable.</p>
-				</div>
-				<div class="col-lg-3 col-sm-6 mb-4">
-					<h4>4. And takes the next action</h4>
-					<p>Notify a team member, write to a system, generate a file, or call an API automatically.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+        <section class="py-5 text-center">
+            <div class="container">
+                <div class="mx-auto" style="max-width: 1100px;">
+                    <div class="card bg-dark border-secondary border-opacity-25 rounded-4 shadow-lg overflow-hidden">
 
-	<div class="about-area style-2 pb-75" id="logistics">
-		<div class="container">
-			<div class="section-title text-center style-2" data-cue="slideInUp">
-				<h3>Example: Logistics & Warehousing</h3>
-				<p style="max-width: 780px; margin: 0 auto; margin-top: 1rem;">
-					Orpius helps teams move information and decisions forward automatically when activity occurs
-					in the yard, at loading bays, or inside warehouse operations.
-				</p>
-			</div>
+                        <div class="row g-0">
+                            <div class="col-lg-9 border-end border-secondary border-opacity-25">
+                                <div class="card-header bg-black border-bottom border-secondary border-opacity-25 py-3 px-4 d-flex justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="spinner-grow text-warning spinner-grow-sm" role="status"></div>
+                                        <span class="mono text-warning x-small fw-bold uppercase">Executing: Daily Ledger Update</span>
+                                    </div>
+                                    <span class="mono text-muted x-small">TRIGGER: 09:00 AM (EST)</span>
+                                </div>
 
-			<div class="row justify-content-center mt-4" data-cues="fadeIn">
-				<div class="col-lg-10">
-					<div class="single-services-info">
-						<h3>When a truck arrives at the loading bay</h3>
-						<p>
-							The camera or gate sensor triggers an event → Orpius identifies the vehicle and bay → updates the yard system →
-							notifies the on-duty supervisor → logs the event for audit. No manual radio calls.
-						</p>
-					</div>
-				</div>
-			</div>
+                                <div class="card-body p-4">
+                                    <div class="row g-3 text-start">
+                                        <div class="col-md-4">
+                                            <div class="p-3 rounded-3 bg-black border border-secondary border-opacity-25 h-100">
+                                                <div class="x-small text-secondary mono mb-2">01 / 09:00 AM TRIGGER</div>
+                                                <h6 class="text-white small">Scan & Extract</h6>
+                                                <p class="text-secondary" style="font-size: 0.75rem;">Orpius wakes up, scans a folder, and extracts all new receipt attachments</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="p-3 rounded-3 bg-black border border-warning border-opacity-50 h-100 shadow-sm">
+                                                <div class="x-small text-warning mono mb-2">02 / EXECUTION ENGINE</div>
+                                                <h6 class="text-white small">Process & Deduplicate</h6>
+                                                <p class="text-secondary" style="font-size: 0.75rem;">Logic validates data, checks for duplicates, and appends rows to <strong>Ledger.xlsx</strong>.</p>
+                                                <div class="mono text-warning x-small bg-warning bg-opacity-10 p-2 rounded">LOG: EXCEL_WRITE_SUCCESS</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="p-3 rounded-3 bg-black border border-success border-opacity-50 h-100">
+                                                <div class="x-small text-success mono mb-2">03 / HANDOFF</div>
+                                                <h6 class="text-white small">Cleanup & Notify</h6>
+                                                <p class="text-secondary" style="font-size: 0.75rem;">
+                                                    Files moved to <span class="text-info">/Processed</span>. <br>
+                                                    <strong>Update sent to Jo:</strong> "Daily sum: $4,281.50"
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-		</div>
-	</div>
+                                    <div class="mt-4 p-3 bg-black rounded border border-secondary border-opacity-25 text-start">
+                                        <div class="mono x-small text-success mb-1">> [System] Daily sum calculated: $4,281.50</div>
+                                        <div class="mono x-small text-warning">> [System] Moving files to "Processed" folder...</div>
+                                        <div class="mono x-small text-white">> [System] Notification sent to Jo (Email)</div>
+                                    </div>
+                                </div>
+                            </div>
 
-	<div class="services-area style-2 pb-75" id="scenarios">
-		<div class="container">
-			<div class="section-title text-center style-2" data-cue="slideInUp">
-				<h3>Where Orpius Fits</h3>
-				<p style="max-width: 780px; margin: 0 auto; margin-top: 1rem;">
-					Or anywhere real work depends on events, hand-offs, and structured outputs.
-				</p>
-			</div>
+                            <div class="col-lg-3 bg-black bg-opacity-50">
+                                <div class="p-3 border-bottom border-secondary border-opacity-25 text-start">
+                                    <span class="mono x-small text-muted uppercase">Team Awareness</span>
+                                </div>
+                                <div class="p-3">
+                                    <div class="d-flex align-items-center mb-4 text-start">
+                                        <div class="position-relative">
+                                            <div class="bg-secondary rounded-circle" style="width: 32px; height: 32px;"></div>
+                                            <span class="position-absolute bottom-0 end-0 bg-success border border-black rounded-circle" style="width: 10px; height: 10px;"></span>
+                                        </div>
+                                        <div class="ms-3">
+                                            <div class="text-white fw-bold x-small">Jo (Finance Lead)</div>
+                                            <div class="text-muted" style="font-size: 0.65rem;">09:34 AM (EST)</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-4 text-start opacity-50">
+                                        <div class="position-relative">
+                                            <div class="bg-secondary rounded-circle" style="width: 32px; height: 32px;"></div>
+                                            <span class="position-absolute bottom-0 end-0 bg-warning border border-black rounded-circle" style="width: 10px; height: 10px;"></span>
+                                        </div>
+                                        <div class="ms-3">
+                                            <div class="text-white fw-bold x-small">Alex (Ops)</div>
+                                            <div class="text-muted" style="font-size: 0.65rem;">02:34 PM (GMT)</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 p-2 bg-warning bg-opacity-10 border border-warning border-opacity-25 rounded text-start">
+                                        <div class="text-warning fw-bold" style="font-size: 0.6rem;">ROLE-BASED ACCESS</div>
+                                        <p class="text-secondary m-0" style="font-size: 0.6rem;">Only Jo can approve deletion of raw invoices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-			<div class="row" data-cues="fadeIn">
-				<!-- Manufacturing -->
-				<div class="col-lg-6 col-sm-6">
-					<div class="single-services-info">
-						<h3>Manufacturing / Plant</h3>
-						<p>
-							Machine alarm fires → Orpius classifies severity → creates a maintenance task with the fault code →
-							assigns the on-duty engineer → emails a one-page summary to shift leads → records the fix for audit.
-						</p>
-					</div>
-				</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<!-- Field Service -->
-				<div class="col-lg-6 col-sm-6">
-					<div class="single-services-info">
-						<h3>Field Service / Maintenance</h3>
-						<p>
-							Work order marked complete → Orpius checks photos and notes → validates required fields →
-							updates the job system → generates a client summary PDF → sends confirmation to the customer.
-						</p>
-					</div>
-				</div>
 
-				<!-- Public Sector -->
-				<div class="col-lg-6 col-sm-6">
-					<div class="single-services-info">
-						<h3>Public Sector / Municipal</h3>
-						<p>
-							Citizen request arrives (form or email) → Orpius extracts key fields → routes to the right department
-							based on topic and postcode → sets an SLA timer → sends status updates to the requester.
-						</p>
-					</div>
-				</div>
+        <!-- Features  -->
+        <section class="pt-7">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4 ">
+                        <article class="tile p-4 h-100">
+                            <h4 class="h4 d-flex align-items-center gap-2">
+                                <div class="text-orpius mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#85D7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 10V7a5 5 0 0 1 9.33-2.5"></path>
+                                        <rect x="3" y="10" width="18" height="11" rx="2"></rect>
+                                        <circle cx="12" cy="15" r="1"></circle>
+                                    </svg>
+                                </div>
+                                Model Sovereignty (BYOLLM)
+                            </h4>
+                            <p class="muted mb-0">
+                                <ul>
+                                    <li><span class="badge rounded-pill bg-light text-dark">No vendor lock-in:</span> Plug in your own API keys.</li>
+                                    <li><span class="badge rounded-pill bg-light text-dark">No Token Markups:</span> Pay raw API costs with zero middleman fees.</li>
+                                    <li><span class="badge rounded-pill bg-light text-dark">Model Agnostic:</span> Switch "brains" based on task complexity.</li>
+                                </ul>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="tile p-4 h-100">
+                            <h4 class="h4 d-flex align-items-center gap-2">
+                                <div class="text-orpius mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#85D7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                        <rect x="9" y="9" width="6" height="6"></rect>
+                                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                                    </svg>
+                                </div>
+                                The .NET Execution Engine
+                            </h4>
+                            <p class="muted  mb-0">
+                                <ul>
+                                    <li><span class="text-info">Native Speed:</span> High-performance WASM execution (10x faster than Python).</li>
+                                    <li><span class="text-info">Self-Coding Agents:</span> Real-time .NET tool generation for complex logic.</li>
+                                    <li><span class="text-info">Engineered Stability:</span> Type-safe reliability for mission-critical tasks.</li>
+                                </ul>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="tile p-4 h-100">
+                            <h4 class="h4 d-flex align-items-center gap-2">
+                                <div class="text-orpius mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#85D7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="M8 11h8"></path>
+                                        <path d="M12 8v6"></path>
+                                    </svg>
+                                </div>
+                                Security Safeguards
+                            </h4>
+                            <p class="muted  mb-0">
+                                <ul>
+                                    <li><span class="text-info">Secrets Shield:</span> Mask passwords and API keys from the AI.</li>
+                                    <li><span class="text-info">Isolated Sandboxing:</span> Isolated execution prevents rogue code.</li>
+                                    <li><span class="text-info">Zero-Retention:</span> Data is processed in volatile memory and never stored</li>
+                                </ul>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<!-- Back-Office Ops -->
-				<div class="col-lg-6 col-sm-6">
-					<div class="single-services-info">
-						<h3>Back-Office Operations</h3>
-						<p>
-							Purchase request email arrives → Orpius extracts vendor, amount, and cost centre → checks approval limits →
-							creates an approval task for the correct approver → posts to finance queue → confirms to requester.
-						</p>
-					</div>
-				</div>
-			</div>
+        <!-- CTA -->
+        <section class="cta-section pt-7">
+            <div class="container">
+                <span class="kicker">JOIN THOSE ALREADY SAVING HOURS EVERY WEEK</span>
+                <h1 class="mb-3">Start Saving Time</h1>
+                <br />
+                <a href="get-started.html" class="button brand">Get Orpius</a>
+            </div>
+        </section>
+    </main>
 
-			<div class="row justify-content-center mt-3">
-				<div class="col-lg-10">
-					<p class="text-center" style="opacity:0.9;">
-						Same pattern every time: <em>Input → Interpret → Structured Output → Next Action → Audit.</em>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <footer role="contentinfo">
+        <div class="container">
+            <small class="muted">&#169; 2026 Orpius. All rights reserved.</small>
+        </div>
+    </footer>
 
-	<!-- Start Product Area -->
-	<div class="product-area style-2 pt-100 pb-75" id="product">
-		<div class="container">
-			<div class="section-title text-center style-2" data-cue="slideInUp">
-				<span class="d-block">What is the Orpius Platform?</span>
-
-				<!-- CHANGED: Product narrative (starts with "Orpius is a developer-first") -->
-				<h3>
-					Orpius is a developer-first platform for non-interactive generative AI. It triggers on events and schedules, integrates with your systems, and delivers structured outputs automatically.
-				</h3><br />
-				<h3>
-					Run code securely in isolated environments, keep secrets out of prompts, and orchestrate end-to-end activities that read from and write back to your stack.
-				</h3>
-				<br />
-				<h3>
-					No new frameworks. No rewrites. Most teams are up and running in a few hours.
-				</h3>
-			</div>
-
-			<!-- CHANGED: Outcome-oriented tiles (same styling) -->
-			<div class="row justify-content-center" data-cues="fadeIn">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-product-item d-flex align-items-center">
-						<div class="icon">
-							<!-- (kept existing SVG) -->
-							<svg xmlns="http://www.w3.org/2000/svg" width="80" height="58" viewBox="0 0 80 58" fill="none">
-								<path d="M100.761 0.479282C101.995 11.8276 98.3964 23.4807 91.2334 32.3202C86.2601 38.4516 79.4232 41.7694 72.6445 39.0847C66.6928 49.1903 55.6047 55.7086 43.4218 50.3041C41.6281 49.5069 39.9742 48.4049 38.4834 47.1035C38.297 47.2325 38.1107 47.3615 37.9243 47.4787C27.9194 53.9852 15.818 53.657 5.04436 49.6475C6.75649 51.9336 8.46862 54.2197 10.1924 56.5058C10.9611 57.5257 9.40039 58.4401 8.5618 57.7719C6.52354 56.1423 -0.651108 51.8984 0.047722 48.4986C0.711609 45.263 7.9678 42.8128 10.4021 41.4059C11.5668 40.726 12.6267 42.5431 11.4503 43.2231C10.0293 44.0437 6.36049 45.5678 4.31059 47.1739C12.7897 50.6909 22.3288 51.9219 31.1107 48.6393C32.951 47.9594 34.9659 46.9277 36.9576 45.6264C32.6365 40.9722 30.377 34.3484 32.2056 28.0998C34.1506 21.4174 43.2937 15.5791 48.5349 22.6953C54.0673 30.2217 46.4966 40.6791 40.114 45.8726C47.9409 52.3674 59.8093 50.6089 66.9374 43.7741C68.568 42.2149 69.9773 40.386 71.1537 38.393C70.1287 37.8537 69.1038 37.162 68.0905 36.3179C62.0107 31.2417 56.4433 18.0528 60.9508 10.456C65.5397 2.73019 74.2868 8.93191 76.1853 15.286C78.3283 22.496 77.0704 30.6555 73.5297 37.4786C76.3483 38.5806 79.4698 38.7213 82.5912 37.4082C87.0987 35.4973 90.6627 30.8431 93.1668 26.775C98.1052 18.7679 99.9455 9.81117 99.7708 0.479282C99.7591 -0.177231 100.703 -0.142059 100.761 0.479282ZM48.0224 27.6895C46.7762 19.9285 38.5882 20.2802 35.2804 25.8841C34.0225 28.0177 33.4867 30.679 33.5683 33.1292C33.708 37.3731 35.6997 41.4411 38.5998 44.4775C44.2021 40.3508 49.059 34.1726 48.0224 27.6895ZM74.5081 16.7163C74.2285 15.2978 73.7277 13.9613 73.0056 12.6951C70.5597 8.52159 67.0772 8.09954 62.5581 11.4173C61.3584 13.1758 61.3235 15.8839 61.4516 17.8886C61.7195 22.3905 63.3967 27.3729 65.8659 31.0893C67.4615 33.4926 69.6046 35.5208 72.0389 36.8221C75.1487 30.6672 76.162 23.2228 74.5081 16.7163Z" fill="url(#paint0_linear_431_44)" />
-								<defs>
-									<linearGradient id="paint0_linear_431_44" x1="101" y1="29" x2="3.45822e-07" y2="29" gradientUnits="userSpaceOnUse">
-										<stop offset="0" stop-color="#00dbde" />
-										<stop offset="0.499797" stop-color="#00dbde" />
-										<stop offset="1" stop-color="#fc00ff" />
-									</linearGradient>
-								</defs>
-							</svg>
-						</div>
-						<div class="content">
-							<!-- CHANGED: Tile 1 (starts with "Add AI safely") -->
-							<h3>
-								Add AI safely, with minimal code.
-							</h3>
-							<p>
-								Attach Orpius to existing systems without rewrites. Keep core logic isolated; run AI steps in controlled environments.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="single-product-item d-flex align-items-center">
-						<div class="icon">
-							<!-- (kept existing SVG) -->
-							<svg xmlns="http://www.w3.org/2000/svg" width="80" height="58" viewBox="0 0 80 58" fill="none">
-								<path d="M100.761 0.479282C101.995 11.8276 98.3964 23.4807 91.2334 32.3202C86.2601 38.4516 79.4232 41.7694 72.6445 39.0847C66.6928 49.1903 55.6047 55.7086 43.4218 50.3041C41.6281 49.5069 39.9742 48.4049 38.4834 47.1035C38.297 47.2325 38.1107 47.3615 37.9243 47.4787C27.9194 53.9852 15.818 53.657 5.04436 49.6475C6.75649 51.9336 8.46862 54.2197 10.1924 56.5058C10.9611 57.5257 9.40039 58.4401 8.5618 57.7719C6.52354 56.1423 -0.651108 51.8984 0.047722 48.4986C0.711609 45.263 7.9678 42.8128 10.4021 41.4059C11.5668 40.726 12.6267 42.5431 11.4503 43.2231C10.0293 44.0437 6.36049 45.5678 4.31059 47.1739C12.7897 50.6909 22.3288 51.9219 31.1107 48.6393C32.951 47.9594 34.9659 46.9277 36.9576 45.6264C32.6365 40.9722 30.377 34.3484 32.2056 28.0998C34.1506 21.4174 43.2937 15.5791 48.5349 22.6953C54.0673 30.2217 46.4966 40.6791 40.114 45.8726C47.9409 52.3674 59.8093 50.6089 66.9374 43.7741C68.568 42.2149 69.9773 40.386 71.1537 38.393C70.1287 37.8537 69.1038 37.162 68.0905 36.3179C62.0107 31.2417 56.4433 18.0528 60.9508 10.456C65.5397 2.73019 74.2868 8.93191 76.1853 15.286C78.3283 22.496 77.0704 30.6555 73.5297 37.4786C76.3483 38.5806 79.4698 38.7213 82.5912 37.4082C87.0987 35.4973 90.6627 30.8431 93.1668 26.775C98.1052 18.7679 99.9455 9.81117 99.7708 0.479282C99.7591 -0.177231 100.703 -0.142059 100.761 0.479282ZM48.0224 27.6895C46.7762 19.9285 38.5882 20.2802 35.2804 25.8841C34.0225 28.0177 33.4867 30.679 33.5683 33.1292C33.708 37.3731 35.6997 41.4411 38.5998 44.4775C44.2021 40.3508 49.059 34.1726 48.0224 27.6895ZM74.5081 16.7163C74.2285 15.2978 73.7277 13.9613 73.0056 12.6951C70.5597 8.52159 67.0772 8.09954 62.5581 11.4173C61.3584 13.1758 61.3235 15.8839 61.4516 17.8886C61.7195 22.3905 63.3967 27.3729 65.8659 31.0893C67.4615 33.4926 69.6046 35.5208 72.0389 36.8221C75.1487 30.6672 76.162 23.2228 74.5081 16.7163Z" fill="url(#paint0_linear_431_44)" />
-							</svg>
-						</div>
-						<div class="content">
-							<!-- CHANGED: Tile 2 (starts with "Use the Talent") -->
-							<h3>Use the Talent you Already Have</h3>
-							<p>
-								Your developers add event/schedule triggers and tool calls. No retraining. No specialists. Your team, your stack.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="single-product-item d-flex align-items-center">
-						<div class="icon">
-							<!-- (kept existing SVG) -->
-							<svg xmlns="http://www.w3.org/2000/svg" width="80" height="58" viewBox="0 0 80 58" fill="none">
-								<path d="M100.761 0.479282C101.995 11.8276 98.3964 23.4807 91.2334 32.3202C86.2601 38.4516 79.4232 41.7694 72.6445 39.0847C66.6928 49.1903 55.6047 55.7086 43.4218 50.3041C41.6281 49.5069 39.9742 48.4049 38.4834 47.1035C38.297 47.2325 38.1107 47.3615 37.9243 47.4787C27.9194 53.9852 15.818 53.657 5.04436 49.6475C6.75649 51.9336 8.46862 54.2197 10.1924 56.5058C10.9611 57.5257 9.40039 58.4401 8.5618 57.7719C6.52354 56.1423 -0.651108 51.8984 0.047722 48.4986C0.711609 45.263 7.9678 42.8128 10.4021 41.4059C11.5668 40.726 12.6267 42.5431 11.4503 43.2231C10.0293 44.0437 6.36049 45.5678 4.31059 47.1739C12.7897 50.6909 22.3288 51.9219 31.1107 48.6393C32.951 47.9594 34.9659 46.9277 36.9576 45.6264C32.6365 40.9722 30.377 34.3484 32.2056 28.0998C34.1506 21.4174 43.2937 15.5791 48.5349 22.6953C54.0673 30.2217 46.4966 40.6791 40.114 45.8726C47.9409 52.3674 59.8093 50.6089 66.9374 43.7741C68.568 42.2149 69.9773 40.386 71.1537 38.393C70.1287 37.8537 69.1038 37.162 68.0905 36.3179C62.0107 31.2417 56.4433 18.0528 60.9508 10.456C65.5397 2.73019 74.2868 8.93191 76.1853 15.286C78.3283 22.496 77.0704 30.6555 73.5297 37.4786C76.3483 38.5806 79.4698 38.7213 82.5912 37.4082C87.0987 35.4973 90.6627 30.8431 93.1668 26.775C98.1052 18.7679 99.9455 9.81117 99.7708 0.479282C99.7591 -0.177231 100.703 -0.142059 100.761 0.479282ZM48.0224 27.6895C46.7762 19.9285 38.5882 20.2802 35.2804 25.8841C34.0225 28.0177 33.4867 30.679 33.5683 33.1292C33.708 37.3731 35.6997 41.4411 38.5998 44.4775C44.2021 40.3508 49.059 34.1726 48.0224 27.6895ZM74.5081 16.7163C74.2285 15.2978 73.7277 13.9613 73.0056 12.6951C70.5597 8.52159 67.0772 8.09954 62.5581 11.4173C61.3584 13.1758 61.3235 15.8839 61.4516 17.8886C61.7195 22.3905 63.3967 27.3729 65.8659 31.0893C67.4615 33.4926 69.6046 35.5208 72.0389 36.8221C75.1487 30.6672 76.162 23.2228 74.5081 16.7163Z" fill="url(#paint0_linear_431_44)" />
-							</svg>
-						</div>
-						<div class="content">
-							<!-- CHANGED: Tile 3 (starts with "Extend Orpius") -->
-							<h3>Extend Orpius to Do What You Need</h3>
-							<p>
-								Connect tools, APIs, databases, and services. Agents call only the capabilities you allow, with full audit.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div> <!-- /row -->
-		</div>
-		<div class="background-ellipse"></div>
-	</div>
-	<!-- End Product Area -->
-
-	<!-- CHANGED: Services Area headline kept, now supports story flow -->
-	<div class="services-area style-2 pb-75" id="about">
-		<div class="container">
-			<div class="section-title text-center style-2" data-cue="slideInUp">
-				<h3>
-					Get started fast, then scale to sophisticated, audited automation — without changing your architecture.
-				</h3>
-			</div>
-		</div>
-	</div>
-
-	<!-- CHANGED: About Area (minor edits for clarity) -->
-	<div class="about-area style-2 pb-75" id="about">
-		<div class="container">
-			<div class="row align-items-center" data-cue="slideInUp">
-				<div class="col-lg-6">
-					<div class="about-image style-2">
-						<div class="image-1">
-							<img src="assets/images/about/about1.png" alt="about-image">
-						</div>
-						<div class="image-2">
-							<img src="assets/images/about/about2.png" alt="about-image">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="about-content style-2">
-						<div class="title">
-							<span class="d-block">About us</span>
-							<p id="contact">
-								We believe bringing AI into operations shouldn’t be complex or costly.
-							</p>
-							<p>
-								Just as teams don’t build their own database engines, agentic foundations should be ready-to-use.
-								Orpius lets developers add reliable, secure AI steps into real workflows — using the technology they already know.
-							</p>
-							<p>
-								Our experience spans enterprise-grade systems across industries. Orpius packages that into something you can adopt in days, not months.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="contact-area">
-		<div class="container">
-			<div class="contact-info-area">
-				<div class="row align-items-center" data-cues="fadeIn">
-
-					<div class="single-contact-info">
-						<div class="contact-submit align-items-center">
-							<h3>Identify your first workflow — request Early Access.</h3>
-
-							<form action="https://formspree.io/f/xjvnddpd" id="EarlyAccessForm" method="POST">
-								<div class="row">
-									<div class="single-contact-info">
-										<div class="form-group">
-											<input name="subject" type="hidden" value="Orpius Platform: Request Early Access" />
-											<input type="email" name="email" class="form-control" placeholder="Email*" required>
-
-											<textarea class="form-control textarea" name="message" placeholder="Optional: Tell us your trigger (email, sensor, camera, file) and the outcome you want." rows="3"></textarea>
-
-											<button class="g-recaptcha" id="validate" data-sitekey="6Ld12_EpAAAAALI3Nlq0W0AHn3-Btch43juk-5S_"
-													data-callback="onSubmit" data-action="submit" type="submit">
-												Submit
-											</button>
-
-											<span>We never disclose your personal information to anyone. We take your privacy seriously.</span>
-										</div>
-										<span style="font-size:12px">
-											This site is protected by reCAPTCHA and the Google
-											<a href="https://policies.google.com/privacy">Privacy Policy</a> and
-											<a href="https://policies.google.com/terms">Terms of Service</a> apply.
-										</span>
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Contact Area -->
-
-	<!-- Start Copyright Area -->
-	<div class="copyright-area">
-		<div class="container">
-			<div class="copyright-content text-center" data-cue="slideInUp">
-				<p>Copyright @ 2025 <strong>Orpius</strong> All Rights Reserved</p>
-			</div>
-		</div>
-	</div>
-	<!-- End Copyright Area -->
-
-	<!-- Back to Top -->
-	<div class="go-top">
-		<i class="ri-arrow-up-line"></i>
-	</div>
-
-	<!-- Js Files -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/odometer.min.js"></script>
-	<script src="assets/js/meanmenu.min.js"></script>
-	<script src="assets/js/scrollCue.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/jquery.magnific.popup.js"></script>
-	<script src="assets/js/custom.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
