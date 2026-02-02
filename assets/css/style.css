@@ -1,0 +1,459 @@
+
+	/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+	html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+
+	* { box-sizing: border-box; margin: 0;padding: 0; } 
+
+	html, body { height: 100%; }
+
+
+
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	  font-weight: 700;
+	  color: #ffffff;
+	}
+
+    :root{
+      --body-font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
+      --brand: #00D2FF;
+      --brand-2:#6E7BFF;
+      --line:#152033;
+      --muted:#A7B4CC;
+      --text:#EAF2FF;
+	  --shadow: 0 10px 30px rgba(0,0,0,.45);
+	  --maxw: 1220px;
+
+    }
+
+    body{
+		font-family: var(--body-font-family);
+		margin: 0;
+		background: linear-gradient(180deg, #0a0a0a 0%, #0a1628 50%, #0a0a0a 100%);
+		color: var(--text);
+		line-height: 1.6;
+    }
+	
+	a { 
+		color: var(--text); 
+		text-decoration: none; 
+	}
+	
+	 a:hover{ 
+		color: white; 
+	}
+	
+	h1 { 
+		margin: 12px 0 16px; 
+		font-size: clamp(34px, 6.2vw, 62px); 
+		line-height: 1.05; 
+		letter-spacing: -.02em; 
+	}
+	
+	h2{font-size:42px}
+	h3{font-size:24px}
+	h4{font-size:20px}
+	h5{font-size:18px}
+	h6{font-size:16px}
+
+
+
+    /* Navigation Bar */
+    .navbar{
+		backdrop-filter: blur(12px);
+		background-color: rgba(12,17,29,.7)!important;
+		border-bottom: 1px solid var(--line);
+    }
+    /* Center links, keep CTA at right */
+    .navbar-nav{
+		gap: 1.25rem;
+    }
+    .navbar-collapse{
+		justify-content: center; /* centre the menu */
+
+    }
+    .nav-cta{
+		 margin-left: auto; /* push CTA to the far right */
+		 font-size: 0.8rem;
+    }
+
+    /* Nav link colour = white (normal/hover/active) */
+    .navbar .nav-link,
+    .navbar .dropdown-toggle{
+		color:#fff !important;
+    }
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus{
+		  color:#fff !important;
+		  opacity: .9;
+    }
+	
+	.container{
+		width: 100%;
+		max-width: var(--maxw);
+		margin: 0 auto;
+		padding: 0 24px; 
+	}
+
+	.pt-7{
+		padding-top:9rem!important;
+	}
+
+	.py-7{
+		padding-top:9rem!important;
+		padding-bottom:9rem!important
+	}
+
+	.pt-4 {
+		padding-top: 4rem;
+		padding-bottom: 4rem
+	}
+	
+	.capabilities h3 {
+	  margin-bottom: 0.25rem;
+	  font-size: 1.2rem;
+	  font-weight: 600;
+	  display: flex;
+	  align-items: center;
+	  gap: 0.5rem;
+	}
+
+	.capabilities i {
+	  font-size: 1.15rem;
+	  color: white; /* or your brand colour */
+	}
+
+	.muted{ color:var(--muted)!important; }
+
+    .section-header { color:var(--muted); max-width:700px; }
+	
+	.section-description{ color:var(--muted); font-size: 18px; color: white; }
+	
+
+	.about-content p {
+		margin-bottom: 14px;
+		font-size: 1.05rem;
+		line-height: 1.55;
+		color: var(--muted);
+	}
+	
+	.about-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 14px;
+		display: block;
+	}
+
+
+.dropdown-menu {
+	
+	background: rgba(12,17,29,.7);
+}
+.dropdown-menu-dark .dropdown-item {
+	background: rgba(12,17,29,.7);
+	color: #fff;
+}
+    .dropdown-menu-dark .dropdown-item:hover{
+      background:#121522;
+      color:#fff;
+    }
+
+
+/* Open top-level dropdown on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+/* Submenu support */
+.dropdown-submenu {
+	position: relative;
+}
+
+	.dropdown-submenu > .dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-left: 0.1rem;
+		display: none;
+	}
+
+	/* Open submenu on hover */
+	.dropdown-submenu:hover > .dropdown-menu {
+		display: block;
+	}
+
+
+   
+	.button {
+		display: inline-flex; 
+		align-items: center; 
+		gap: 10px; 
+		padding: 12px 18px; 
+		border-radius: 999px; 
+		border: 1px solid var(--line);
+		background: #121522; 
+		color: var(--text); 
+		font-weight: 600; 
+		box-shadow: var(--shadow); 
+		transition: transform .06s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease; 
+	}
+
+	.button:hover {
+		transform: translateY(-1px);
+		filter: brightness(1.06); 
+	}
+
+		.button:focus-visible {
+			outline: none;
+			box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 35%, transparent);
+		}
+
+	.button.brand {
+		background: linear-gradient(135deg, var(--brand), var(--brand-2)); 
+		color: #0b0c10; 
+		border-color: transparent; 
+		box-shadow: 0 6px 20px rgba(0, 210, 255, .25); 
+
+	}
+
+		.button.outline {
+			border-color: white /*var(--line)*/;
+		
+			box-shadow: none;
+		}
+
+
+    .kicker{
+		display:inline-flex;align-items:center;gap:.5rem;
+		padding:.35rem .75rem;border-radius:50rem;
+		background:#121522;border:1px solid var(--line);
+		color:var(--muted);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;
+    }
+	 
+   
+    .hero .display-5{ font-weight: 700; }
+	
+
+
+    .hero{
+		/*text-align:center;*/
+		padding: 220px 0 80px; /* original spacing */
+    }
+    /*.hero h1{
+      font-weight:600;
+      letter-spacing:-2px;
+      line-height:1.1;
+      font-size:64px; /* original size 
+    }*/
+	
+    @media (max-width: 767.98px){
+      .hero h1{ font-size:42px; }
+    }
+    .hero .lead{
+		max-width:700px;
+		margin: 0 auto 40px;
+    }
+
+    /* Cards / tiles */
+    .feature-card, .tile{
+		border:1px solid var(--line);
+		border-radius:18px;
+		background: linear-gradient(180deg, #0e1117, #0b0d13);
+		box-shadow: 0 10px 30px rgba(0,0,0,.45);
+		transition: transform .08s ease, border-color .2s ease;
+		height:100%;
+    }
+    .feature-card:hover, .tile:hover{
+		transform:translateY(-2px);
+		border-color: rgba(127,146,255,.35);
+    }
+    .feature-icon{
+		width:48px;height:48px;border-radius:10px;
+		background:#1a1a1a;display:grid;place-items:center;margin-bottom:1rem;
+		font-size:24px;
+    }
+    
+
+    .cta-section{
+      /*border-top:1px solid var(--line);*/
+      text-align:center;
+      padding:5rem 0;
+    }
+	
+    footer{
+      border-top:1px solid var(--line);
+      text-align:center;
+      padding:3rem 0;
+    }
+	
+	
+	.form-control {
+		background-color: var(--surface-2); 
+		border:1px solid var(--line); 
+		border-radius: var(--radius);
+	}
+	.panel{ 
+		background: linear-gradient(180deg, var(--surface), #0b0f1a); 
+		border:1px solid var(--line); 
+		border-radius: var(--radius); 
+	}
+    .panel-inset{ 
+		/*background: linear-gradient(180deg, var(--surface-2), #0a0f19); */
+		border:1px solid var(--line); 
+		border-radius: var(--radius); 
+	}
+    .card.panel{ 
+		box-shadow: 0 16px 40px rgba(0,0,0,.35); 
+		border-radius: 18px; 
+		padding: clamp(32px, 4vw, 48px); 
+		/*background: linear-gradient(180deg, #131626, #0e1016);*/
+		border: 1px solid var(--line);
+		}
+	.icon-circle{ 
+		width:40px; 
+		height:40px; 
+		border-radius:999px; 
+		display:inline-grid; 
+		place-items:center; 
+		background: rgba(0,210,255,.12); 
+		border:1px solid rgba(0,210,255,.3); 
+	}
+	
+	/* Remove default accordion borders */
+	.faq-plain .accordion-item {
+		border: none;  background: transparent;  padding: 10px 0 10px;
+	}
+
+	/* Add only a bottom divider */
+	.faq-plain .accordion-item:not(:last-child) {
+		border-bottom: 1px solid var(--line);
+	}
+
+	/* Remove background highlight on active/open */
+	.faq-plain .accordion-button:not(.collapsed) {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	/* Remove focus/outline glow */
+	.faq-plain .accordion-button:focus {
+		box-shadow: none;
+		outline: 0;
+		box-shadow: unset;
+		border-color: unset;
+		border-radius: unset;
+	}
+
+	/* Slightly reduce accordion button padding for cleaner density */
+	.faq-plain .accordion-button {
+		padding: 10px 0 10px;
+		font-weight: 600;
+		background: transparent;
+	}
+
+	/* Keep answer text aligned under the header */
+	.faq-plain .accordion-body {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 1rem;
+	}
+
+	/* Remove blue colour & background from accordion headers */
+	.faq-plain .accordion-button {
+		background: none !important;
+		color: inherit !important;
+		box-shadow: none !important;
+		padding-left: 0;
+		padding-right: 0;
+		font-weight: 600;
+	}
+
+	/* Same when expanded */
+	.faq-plain .accordion-button:not(.collapsed) {
+		background: none !important;
+		color: inherit !important;
+		box-shadow: none !important;
+	}
+
+	/* Remove blue focus outline entirely */
+	.faq-plain .accordion-button:focus {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
+	/* Keep chevron but make it subtle */
+	.faq-plain .accordion-button::after {
+		filter: invert(0.5) opacity(0.6); /* soft grey arrow */
+	}
+
+	/* Hover state: slight text dim  */
+	.faq-plain .accordion-button:hover {
+		color: inherit;
+		opacity: 0.85;
+	}
+	.research-card {
+		background: radial-gradient(circle at top left, #1f2937 0, #020617 65%);
+		border-radius: 1rem;
+		border: 1px solid rgba(148, 163, 184, 0.35);
+		box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
+	}
+
+		.research-card .card-body {
+			padding: 1.5rem 1.5rem 1.35rem;
+		}
+
+	.research-card-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.research-meta {
+		font-size: 1rem;
+		color: rgba(209, 213, 219, 0.85);
+	}
+
+	.research-excerpt {
+		font-size: 1.2rem;
+		color: rgba(229, 231, 235, 0.92);
+	}
+
+	.badge-topic {
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		border-radius: 999px;
+		padding: 0.15rem 0.6rem;
+		border: 1px solid rgba(148, 163, 184, 0.5);
+		color: #9ca3af;
+	}
+
+	.btn-ghost-light {
+		border-radius: 999px;
+		border: 1px solid rgba(148, 163, 184, 0.6);
+		background: transparent;
+		color: #e5e7eb;
+		font-size: 0.85rem;
+		padding: 0.35rem 0.9rem;
+	}
+
+	.btn-ghost-light:hover {
+		border-color: #38bdf8;
+		color: #f9fafb;
+		background: rgba(56, 189, 248, 0.08);
+	}
+
+
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+		max-width: 100%;
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
