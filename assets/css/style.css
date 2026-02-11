@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 	/* Brand */
 	/*--brand: #4338CA;*/
 	--brand: #4F6EF7;
+	--bs-primary: var(--brand);
 	--brand-2: #0891B2;
 	--bs-info-rgb: #444444;
 	/* Light theme surfaces */
@@ -47,6 +48,11 @@ h1, h2, h3, h4, h5, h6 {
 	--radius: 18px;
 	/* Previously referenced but missing */
 	--surface-2: rgba(15, 23, 42, .03);
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: color-mix(in oklab, var(--brand) 15%, transparent);
+    --bs-dropdown-link-active-color: var(--brand);
 }
 
 body {
