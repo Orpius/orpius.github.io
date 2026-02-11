@@ -51,8 +51,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dropdown-menu {
-    --bs-dropdown-link-active-bg: color-mix(in oklab, var(--brand) 15%, transparent);
-    --bs-dropdown-link-active-color: var(--brand);
+	--bs-dropdown-link-active-bg: color-mix(in oklab, var(--text) 10%, transparent);
+	--bs-dropdown-link-active-color: #0b1220;
 }
 
 body {
