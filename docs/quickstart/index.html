@@ -109,7 +109,7 @@
 <p>Get from “installed” to “first automation” in about 10 to 20 minutes.</p>
 <h2 id="who-this-is-for">Who this is for</h2>
 <p>This Quick Start is for anyone new to Orpius who wants a fast, practical introduction using the Orpius Console.</p>
-<p>If you need deeper detail (security model, architecture, custom tools, SDK integration), use the In-depth Technical Guide.</p>
+<p>If you need deeper detail (security model, architecture, custom tools, SDK integration), use the In-depth <a href="https://github.com/Orpius/SDK/blob/main/docs/UserGuide/index.md">Technical Guide</a>.</p>
 <h2 id="what-youll-achieve">What you’ll achieve</h2>
 <p>By the end, you will have:</p>
 <ul>
@@ -122,15 +122,32 @@
 <h2 id="key-ideas-simple-mental-model">Key ideas (simple mental model)</h2>
 <p>You only need a few concepts to get started:</p>
 <ul>
-<li><strong>Organisation</strong>: your company or team boundary.</li>
-<li><strong>Space</strong>: a workspace for one project. Most things live inside a space.</li>
-<li><strong>Agent</strong>: an AI “user” that can chat and perform work.</li>
-<li><strong>Tools</strong>: capabilities an agent can use (scheduler, notifications, web retrieval, code execution, etc).</li>
-<li><strong>Schedule</strong>: runs an activity at a time/interval.</li>
-<li><strong>Event</strong>: runs an activity when triggered (often by an HTTP call).</li>
-<li><strong>Secrets</strong>: store API keys and tokens safely, so they are not exposed to model providers.</li>
+<li><p><strong>Organisation</strong>: your company or team boundary.</p>
+</li>
+<li><p><strong>Space</strong>: a workspace for one project. Most things live inside a space.</p>
+</li>
+<li><p><strong>Agent</strong>: an AI “user” that can chat and perform work.</p>
+</li>
+<li><p><strong>Tools</strong>: capabilities an agent can use (scheduler, notifications, web retrieval, code execution, etc).</p>
+</li>
+<li><p><strong>Schedule</strong>: runs an activity at a time/interval.</p>
+</li>
+<li><p><strong>Event</strong>: runs an activity when triggered (often by an HTTP call).</p>
+</li>
+<li><p><strong>Operation</strong>: A secure entry point to an agent that allows agent-to-agent communication and delegation of work.</p>
+<p>It can be used:</p>
+<ul>
+<li>By other agents to delegate work (agent-to-agent communication).</li>
+<li>By your application or external systems when integrating Orpius into your software or services.</li>
+</ul>
+</li>
+<li><p><strong>Secrets</strong>: store API keys and tokens safely, so they are not exposed to model providers.</p>
+</li>
 </ul>
 <p>That’s it. Everything else is a refinement of these.</p>
+<p><strong>In simple terms:</strong> agents do the work, tools give them abilities,
+schedules, events, or operations decide when that work runs, operations can also connect agents to other agents,
+spaces organise everything, and secrets keep credentials safe.</p>
 <hr />
 <h2 id="install-and-connect-to-orpius">1) Install and connect to Orpius</h2>
 <ol>
@@ -140,6 +157,7 @@
 <li>Enter your <strong>Server URL</strong>.</li>
 <li>If you are a <strong>system owner</strong>, enter the <strong>Access Key</strong>.</li>
 </ol>
+<p>If you are using the <strong>Orpius trial environment</strong>, no additional setup is required. Simply create your account and sign in when prompted.</p>
 <p>If this is your first launch as the system owner, you’ll be prompted to complete initial setup (including email server settings and creating your account).</p>
 <hr />
 <h2 id="create-your-account-and-open-a-space">2) Create your account and open a Space</h2>
@@ -159,8 +177,32 @@
 <li>Save.</li>
 </ol>
 <p>If you are not sure which model to start with, pick one you already have an API key for. The goal here is simply to confirm inferencing is working.</p>
+<blockquote>
+<p>In our testing, Gemini 3 Flash has performed reliably across a wide range of tasks while remaining cost-efficient.</p>
+</blockquote>
 <hr />
-<h2 id="start-your-first-chat">4) Start your first chat</h2>
+<h2 id="assigning-models-to-built-in-agents">4) Assigning models to built-in agents</h2>
+<p>Orpius includes two built-in agents:</p>
+<ul>
+<li><p>Orpius – The interactive agent that receives your instructions through chat and coordinates tasks.</p>
+</li>
+<li><p>Phaedra – The agent that performs the tasks in the background.</p>
+</li>
+</ul>
+<p>By default, both agents use the first model you configure. If you add additional models, you may want to assign specific models to each agent to control behaviour, performance, or cost.</p>
+<h3 id="to-change-the-model-used-by-an-agent">To change the model used by an agent</h3>
+<ol>
+<li><p>Open <strong>Agents</strong> from the sidebar.</p>
+</li>
+<li><p>Select <strong>Orpius</strong> or <strong>Phaedra</strong>.</p>
+</li>
+<li><p>Choose the model you want the agent to use.</p>
+</li>
+<li><p>Save your changes.</p>
+</li>
+</ol>
+<p><strong>Tip:</strong> You can change agent models at any time as your workflows evolve.</p>
+<h2 id="start-your-first-chat">5) Start your first chat</h2>
 <ol>
 <li>Open <strong>Chat</strong>.</li>
 <li>Send a simple prompt, for example:</li>
@@ -176,7 +218,7 @@
 <li>network access from the Orpius Server to the provider endpoint</li>
 </ul>
 <hr />
-<h2 id="create-your-first-secret-safe-credentials">5) Create your first Secret (safe credentials)</h2>
+<h2 id="create-your-first-secret-safe-credentials">6) Create your first Secret (safe credentials)</h2>
 <p>Secrets let you reference API keys in prompts without sending the actual values to the model provider. You will use references like:</p>
 <p><code>&lt;%=Key:WeatherKey%&gt;</code></p>
 <ol>
@@ -196,7 +238,7 @@
 </ol>
 <p>Now you can safely reference it in prompts and activities.</p>
 <hr />
-<h2 id="first-automation-option-a-recommended-create-a-schedule">6) First automation option A (recommended): Create a Schedule</h2>
+<h2 id="first-automation-option-a-recommended-create-a-schedule">7) First automation option A (recommended): Create a Schedule</h2>
 <p>This is the quickest way to see Orpius do unattended work.</p>
 <h3 id="a-simple-scheduled-task-write-a-file-and-notify-you">A simple scheduled task: write a file and notify you</h3>
 <ol>
@@ -217,7 +259,7 @@ After writing to the file send me a notification.&quot;</p>
 <li>If notifications aren’t delivered, check whether the email server is configured and whether notifications are enabled.</li>
 </ul>
 <hr />
-<h2 id="first-automation-option-b-create-an-event-and-trigger-it">7) First automation option B: Create an Event and trigger it</h2>
+<h2 id="first-automation-option-b-create-an-event-and-trigger-it">8) First automation option B: Create an Event and trigger it</h2>
 <p>Events are how external systems commonly trigger Orpius.
 They can also be used from one task to trigger another task.</p>
 <h3 id="create-an-event-via-chat">Create an event via chat</h3>
@@ -247,17 +289,69 @@ They can also be used from one task to trigger another task.</p>
 </ul>
 <p>Tip: Events can also accept query string parameters. Keys prefixed with <code>_</code> are tool-only parameters; others may be passed to the agent as well, depending on how your event is set up.</p>
 <hr />
-<h2 id="optional-a-safe-first-integration-pattern-operations">8) (Optional) A safe first integration pattern: Operations</h2>
+<h2 id="a-safe-and-cost-effective-delegation-pattern-using-operations">9) A safe and cost effective delegation pattern using Operations</h2>
 <p>If you are integrating Orpius into your application, <strong>Operations</strong> are the standard entry point.</p>
-<p>High-level steps:</p>
+<p>However, they are also a powerful way for agents to delegate specialised work to other agents.
+They help you reduce cost, because specialised sub-tasks can be handled by a more suitable or lower-cost model
+instead of using a single high-capability model for everything. This Quick Start focuses on this delegation pattern.</p>
+<p>If you are integrating Orpius directly into your software or services,
+see <a href="https://github.com/Orpius/SDK/blob/main/docs/UserGuide/index.md#using-operations-to-connect-your-application-to-ai-agents">Using Operations to Connect Your Application to AI Agents</a> in the GitHub Technical User Guide.</p>
+<h3 id="example-using-operations-for-receipt-processing">Example: Using Operations for Receipt Processing</h3>
+<p>For example, imagine you need to process a large number of image documents, analyse them, and extract structured data from each file.
+The following example shows how you could use an Operation to delegate specialised work to another agent.</p>
+<p>You might design this as follows:</p>
+<p><strong>Step 1: Create an Operation</strong> (This Operation is responsible only for extracting data from receipt images.)</p>
 <ol>
-<li>Open <strong>Operations</strong>.</li>
-<li>Select <strong>Add (+)</strong>.</li>
-<li>Choose the <strong>Agent</strong> that will handle requests.</li>
-<li>Enable only the tools the operation genuinely needs (tools are disabled by default for safety).</li>
-<li>Save, then copy the <strong>External ID</strong> and <strong>Access Key</strong> into your application.</li>
+<li><p>Open <strong>Operations</strong>.</p>
+</li>
+<li><p>Select <strong>Add (+)</strong>.</p>
+</li>
+<li><p>Enter <strong>Operation name</strong> for exampe: <code>FileContentEnquiries</code></p>
+</li>
+<li><p>Choose the <strong>Agent</strong> that will handle requests. This can use a cost-efficient model (for example, Gemini 2.5 Flash), but you should always test whether the model is capable of handling the task. You can switch to a more capable model if needed.</p>
+</li>
+<li><p>Enter <strong>Instructions to Agent:</strong></p>
+<blockquote>
+<p>&quot;You will receive a request to extract data from a financial receipt represented as an image'
+Use the ImageAnalysis tool to understand the content of the receipt and extract the data.
+Return the extracted data as JSON&quot;.</p>
+</blockquote>
+</li>
+<li><p>Enable the <strong>Image Analysis tool</strong> (Note: only enable the <strong>Tools</strong> the operation genuinely needs, tools are disabled by default for safety).</p>
+</li>
+<li><p>Save, then copy the <strong>External ID.</strong></p>
+</li>
 </ol>
-<p>Tip: If an operation is customer-facing, keep tool access minimal. If sensitive work is needed, have the customer-facing agent trigger an Event handled by a more privileged agent.</p>
+<p><strong>Step 2: Use Chat to create the Scheduled Task</strong></p>
+<ol>
+<li>Enter instructions to Agent:</li>
+</ol>
+<blockquote>
+<p>&quot;Every day at 9:00 AM:</p>
+<ol>
+<li>List all files in the Receipts folder.</li>
+<li>If the folder is empty, send a notification to me.</li>
+<li>For each file:
+<ul>
+<li>Call the internal Operation (paste the <strong>External ID</strong>) using the file path as input.</li>
+<li>Extract the data from the JSON response.</li>
+<li>Append the extracted data (Date, Item, Price, Tax, Total, Category, and filename) to Ledger.xlsx.</li>
+<li>Move the processed file to the Processed folder.</li>
+</ul>
+</li>
+<li>Calculate the total sum of the Total column for the processed batch.</li>
+<li>Send a notification to me with the total sum&quot;.</li>
+</ol>
+</blockquote>
+<h3 id="what-happens-behind-the-scenes">What happens behind the scenes</h3>
+<ul>
+<li><p>The built-in agent manages the workflow and file handling.</p>
+</li>
+<li><p>A custom agent performs receipt analysis via the Operation.</p>
+</li>
+<li><p>Each agent can use the most suitable model for its task.</p>
+</li>
+</ul>
 <hr />
 <h2 id="common-pitfalls-and-how-to-avoid-them">Common pitfalls (and how to avoid them)</h2>
 <ul>
