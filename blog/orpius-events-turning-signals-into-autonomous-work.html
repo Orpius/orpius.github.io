@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XPFMGFXVT2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XPFMGFXVT2');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    </head>
+
+<body><nav class="navbar navbar-expand-md fixed-top"><div class="container align-items-center"><a class="navbar-brand d-flex align-items-center gap-2" href="/" aria-label="Home"><img src="assets/images/orpius-logo-small.png" alt="Orpius logo" class="img-fluid"></a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+		<div id="mainNav" class="collapse navbar-collapse"><ul class="navbar-nav mx-auto"><li class="nav-item"><a href="product" class="nav-link">Platform</a></li>
+				<li class="nav-item"><a href="research" class="nav-link">Research</a></li>
+				
+				
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Resources
+					</a>
+
+					<ul class="dropdown-menu shadow resources-menu" aria-labelledby="resourcesDropdown"><li><a href="docs/quickstart" class="dropdown-item fw-semibold">
+								Quick Start
+							</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/blob/main/docs/UserGuide/index.md" target="_blank" rel="noopener noreferrer">
+								Technical User Guide
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/discussions" target="_blank" rel="noopener noreferrer">
+								Forum
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK" target="_blank" rel="noopener noreferrer">
+								Orpius SDK
+							</a></li>
+						
+						<li><a href="blog" class="dropdown-item active" aria-current="page">Blog</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/blob/main/docs/DevelopmentGuides/DotNet/index.md" target="_blank" rel="noopener noreferrer">
+								SDK Guide for .NET
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/blob/main/docs/DevelopmentGuides/Java/index.md" target="_blank" rel="noopener noreferrer">
+								SDK Guide for Java
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/tree/main/DotNet/Orpius.Platform.Sdk/Samples" target="_blank" rel="noopener noreferrer">
+								Custom Tool examples
+							</a></li></ul></li>
+
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="about" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Company
+					</a>
+					<ul class="dropdown-menu shadow" aria-labelledby="companyDropdown"><li><a href="about" class="dropdown-item">About</a></li>
+						<li><a href="partners" class="dropdown-item">Partners</a></li>
+						<li><a href="contact" class="dropdown-item">Contact</a></li>
+						<li><a href="services" class="dropdown-item">Services</a></li></ul></li></ul></div>
+
+		<div class="nav-cta d-none d-md-block"><a href="/get-started" class="button brand">Download</a></div></div></nav>
+
+<main><main class="container"><section class="hero pb-4"><div class="container"><span class="kicker">Blog</span></div></section>
+<div class="container pt-5"><div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><header class="mb-5"><div class="article-meta text-muted mb-2"><span><span class="mr-2 text-xs uppercase tracking-wide text-gray-500">Published</span>
+                <time datetime="2026-03-05T00:00:00.000">March 5, 2026</time></span>
+                           
+                            
+                    <span>By </span><span>Mia Wagner</span></div>
+                <h1 class="article-title">Orpius Events: Turning Signals into Autonomous Work</h1></header></div></div>
+
+        
+                          
+    <div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><article class="article-content"><p>If you want AI agents to be more than chatbots, you need a way to connect real-world signals to real work. A payment clears. A sensor trips. A customer signs a contract. A nightly reconciliation finishes. In most systems, those are just logs or webhook payloads. In Orpius, they can become <em>agentic execution</em>.</p>
+<p>Orpius Events are the platform’s trigger mechanism: a named event represents a meaningful occurrence, and when it is raised it launches one or more activities inside a space. Those activities are not rigid scripts. They are instructions given to an agent operating within Orpius’ secure boundary, with access to the tools and permissions you choose. That means an event can initiate analysis, coordination, follow-up actions, notifications, tool calls, and further delegation.</p>
+<p>An Event is therefore not merely a webhook endpoint. It is a bridge between the outside world (and between internal Orpius workflows) and autonomous, auditable activity execution.</p>
+<p>Below is how Events work, how they are raised internally and externally, how parameters are passed, and how you can use Events as the backbone of “grand” multi-agent, multi-model orchestration.</p>
+<hr />
+<h2 id="what-an-orpius-event-is-and-what-it-is-not">What an Orpius Event is (and what it is not)</h2>
+<p>An <strong>Event</strong> in Orpius is:</p>
+<ul>
+<li>A <strong>registered identifier</strong> in a space (for example, <code>FactoryUnitArrived</code>).</li>
+<li>A <strong>trigger point</strong> that can be raised from outside Orpius via HTTPS, or from inside Orpius by name using the EventTrigger tool.</li>
+<li>A <strong>container for activities</strong>: one event can execute one or many activities, each defined by a title and natural-language instructions.</li>
+<li>A <strong>security boundary and delegation mechanism</strong>: events can be used to separate untrusted triggers from privileged execution.</li>
+</ul>
+<p>An Event is not:</p>
+<ul>
+<li>A hardcoded workflow definition.</li>
+<li>A single “handler function” you must implement and deploy.</li>
+<li>A mere notification primitive.</li>
+</ul>
+<p>Instead, it is an orchestration primitive designed for autonomy: “when X happens, do Y”, where Y can include tool calls, code execution, file operations, notifications, web retrieval, follow-up events, or even calling operations handled by other agents.</p>
+<hr />
+<h2 id="the-big-picture-events-trigger-agentic-activities">The big picture: events trigger agentic activities</h2>
+<p>In Orpius, <em>activities</em> are the unit of non-interactive work. Activities can be triggered by schedules or by events, and are handled by an agent selected by Orpius based on permissions, tools, and profile suitability. Once executed, the outcome is verified by an internal audit step, producing a simple verdict (“Yes” or “No”) and preserving artefacts for later review.</p>
+<p>That lifecycle matters because it means events are not “fire and forget” webhooks. They are “fire and orchestrate”, with supervision, logging, and verification built in.</p>
+<p>In practice:</p>
+<ol>
+<li>An event is raised (externally or internally).</li>
+<li>Orpius places the resulting activity or activities into its activity queue.</li>
+<li>A suitable agent is selected to execute each activity.</li>
+<li>The agent runs the instructions, using permitted tools as needed.</li>
+<li>The outcome is recorded and audited.</li>
+</ol>
+<p>The result is a platform where triggering is easy, but execution remains controlled and observable.</p>
+<hr />
+<h2 id="creating-an-event-chat-first-but-fully-configurable">Creating an Event: chat-first, but fully configurable</h2>
+<p>Orpius supports two practical ways to create events:</p>
+<h3 id="create-via-chat-the-fast-way">1) Create via chat (the fast way)</h3>
+<p>Because the Orpius Console is chat-driven and understands the system itself, you can simply instruct it to create an event and its initial activities.</p>
+<p>Example:</p>
+<blockquote>
+<p>“Create an event named <code>FactoryUnitArrived</code> that notifies the user robertB with the order details.”</p>
+</blockquote>
+<p>Orpius can register the event, create an activity, and include details like usernames where required, then you can inspect and refine it in the Events view.</p>
+<p>This is a subtle but important productivity feature: you do not need to open a separate configuration UI to “wire” automation. You can describe the automation and then tweak it.</p>
+<h3 id="create-manually-the-explicit-way">2) Create manually (the explicit way)</h3>
+<p>Manual creation is straightforward:</p>
+<ul>
+<li>Register the event name in the Events view.</li>
+<li>Add one or more “Event Triggered Work” items (activities), each with a title and instructions.</li>
+<li>Optionally grant relevant custom tools that can be used during execution.</li>
+</ul>
+<p>This is the same end state as chat creation, just done explicitly.</p>
+<hr />
+<h2 id="triggering-an-event-internal-by-name-external-by-https">Triggering an Event: internal by name, external by HTTPS</h2>
+<p>Orpius Events are designed to be triggered in two distinct ways. This duality is where things get interesting.</p>
+<pre class="mermaid">flowchart TB
+  ext[External system&lt;br/>App / webhook / sensor] -->|HTTPS GET or POST&lt;br/>Event ID + Access Key| ev[Orpius Event&lt;br/>Registered in a Space]
+
+  subgraph space[Orpius Space]
+    ev --> act1[Activity A&lt;br/>Instructions]
+    ev --> act2[Activity B&lt;br/>Instructions]
+    act1 --> agent1[Agent executes&lt;br/>selected by Orpius]
+    act2 --> agent2[Agent executes&lt;br/>selected by Orpius]
+    agent1 --> tools[Tools&lt;br/>Notifier / Web / Code / Custom]
+    agent2 --> tools
+    agent1 -->|EventTrigger tool| ev2[Follow-up Event]
+    ev2 --> act3[Activity C]
+  end
+</pre>
+<h3 id="internal-triggering-inside-a-space">Internal triggering (inside a space)</h3>
+<p>Internal triggering uses the <strong>EventTrigger</strong> tool to raise an event by name. Any eligible origin can do this:</p>
+<ul>
+<li>an event activity</li>
+<li>a scheduled activity</li>
+<li>an operation</li>
+<li>an interactive chat</li>
+</ul>
+<p>So an agent can be executing work, detect a condition, and trigger another event to kick off follow-up activities. This is the simplest way to chain behaviours without building a complicated central workflow definition.</p>
+<p>Example pattern:</p>
+<ul>
+<li>Event <code>MotionDetected</code> runs a quick triage activity.</li>
+<li>If triage finds something important, it triggers <code>SecurityAlertRaised</code>.</li>
+<li>That second event runs a different activity that notifies the right people and stores evidence.</li>
+</ul>
+<p>This is <em>agentic composition</em>: small, named triggers coordinating larger behaviours.</p>
+<h3 id="external-triggering-from-any-system">External triggering (from any system)</h3>
+<p>External triggering happens over HTTPS. Each event has a unique endpoint, and Orpius provides two access keys so you can rotate credentials without downtime.</p>
+<p>A typical endpoint shape looks like:</p>
+<p><code>https://&lt;tenant&gt;.app.orpius.com/api/v1/event/raise?event-id=&lt;id&gt;</code></p>
+<p>When called via HTTP GET or POST, Orpius raises the event and kicks off its activities.</p>
+<p>This means you can connect Orpius to:</p>
+<ul>
+<li>your application (customer actions, internal admin actions, business milestones)</li>
+<li>infrastructure (monitoring systems, alerts, CI/CD notifications)</li>
+<li>physical-world signals (cameras, sensors, manufacturing equipment)</li>
+<li>third-party SaaS (webhooks from payment processors, CRMs, ticket systems)</li>
+</ul>
+<p>But you are not limited to “notify someone”. You can trigger autonomous handling with tools and follow-up events.</p>
+<hr />
+<h2 id="events-as-an-internal-orchestration-bus">Events as an internal orchestration bus</h2>
+<p>The “grand” part of Orpius Events is that they don’t just connect external systems to Orpius. They also connect Orpius activities to other Orpius activities.</p>
+<p>Events become your internal event bus for agentic work.</p>
+<p>That enables patterns like:</p>
+<h3 id="fan-out-execution">Fan-out execution</h3>
+<p>A single event can have multiple activities, which can be executed independently:</p>
+<ul>
+<li>One activity writes an incident record to storage.</li>
+<li>Another notifies a human.</li>
+<li>Another triggers a follow-up operation to gather more evidence.</li>
+<li>Another creates a summary report.</li>
+</ul>
+<p>You gain the ability to split responsibilities, and each activity can be phrased for the type of agent/model that is best suited for it.</p>
+<h3 id="escalation-chains">Escalation chains</h3>
+<p>A “soft” event can trigger a “hard” event only when conditions justify it:</p>
+<ul>
+<li><code>InvoiceReceived</code> triggers extraction and validation.</li>
+<li>If validation fails, the agent triggers <code>InvoiceException</code>.</li>
+<li><code>InvoiceException</code> triggers a more privileged workflow (such as notifying finance, requesting human approval, or updating systems).</li>
+</ul>
+<h3 id="state-machine-by-events">State machine by events</h3>
+<p>Instead of building a big workflow engine graph, you can model stages as events:</p>
+<ul>
+<li><code>OrderPlaced</code></li>
+<li><code>OrderVerified</code></li>
+<li><code>OrderPacked</code></li>
+<li><code>OrderShipped</code></li>
+<li><code>OrderDelivered</code></li>
+</ul>
+<p>Each stage runs its own activities and triggers the next event when ready. You get modularity, and you can evolve each stage without rewriting a monolithic workflow.</p>
+<h3 id="multi-agent-collaboration">Multi-agent collaboration</h3>
+<p>Even when events are currently handled by built-in agents, you can still treat each activity as a delegated unit of work. And in Orpius generally, different agents can be configured with different models, personalities, and tool permissions. The point is that events give you a clean, explicit trigger surface that can be used to route work to the right kind of execution context.</p>
+<hr />
+<h2 id="events-and-segregation-of-duties-using-less-trusted-to-trigger-more-trusted">Events and segregation of duties: using “less trusted” to trigger “more trusted”</h2>
+<p>One of the most practical uses of Events is security and control.</p>
+<p>In Orpius, operations exposed to external callers are deliberately locked down: tools are disabled by default because some tools are too powerful for customer-facing contexts (file access, scheduling, team notifications, and so on). That is least privilege applied properly.</p>
+<pre class="mermaid">flowchart TB
+  caller[External caller&lt;br/>Customer app / third-party webhook]
+  op[Customer-facing Operation&lt;br/>Restricted tools]
+  ev[Event boundary&lt;br/>Named + auditable]
+  act[Event activities]
+  agent[Privileged agent context&lt;br/>Full-trust tools as needed]
+  tools[Tools&lt;br/>Storage / Notifier / Scheduler / Custom]
+
+  caller -->|HTTPS + Access Key| op
+  op -->|Raises event| ev
+  ev --> act
+  act --> agent
+  agent --> tools
+
+  opNote[(Least privilege&lt;br/>No storage, no scheduling&lt;br/>No team awareness by default)]
+  op -.-> opNote
+</pre>
+<p>Events provide a clean way to keep that boundary while still enabling powerful automation:</p>
+<ul>
+<li>A customer-facing operation can do lightweight processing and then raise an event.</li>
+<li>The event’s activities run under a more privileged agent context, with the tools and permissions needed to complete the work.</li>
+</ul>
+<p>This gives you segregation of duties in an agentic system:</p>
+<ul>
+<li>Untrusted inputs can <em>request</em> actions, but cannot directly perform sensitive actions.</li>
+<li>Trusted internal activities can validate, enrich, and then act.</li>
+</ul>
+<p>It also makes your system easier to reason about. The event itself becomes the “handover” point where the context changes from “external caller” to “internal execution”.</p>
+<h2 id="passing-parameters-events-as-structured-triggers-not-just-signals">Passing parameters: events as structured triggers, not just signals</h2>
+<p>A trigger without context is mostly noise. Orpius Events explicitly support parameter passing, and this is where events become a powerful integration surface.</p>
+<h3 id="parameters-in-get-requests">Parameters in GET requests</h3>
+<p>When triggering an event via HTTP GET:</p>
+<ul>
+<li>Query string keys prefixed with an underscore (<code>_</code>) are passed to <strong>tools only</strong>.</li>
+<li>Query string keys without the underscore are passed to <strong>tools and the agent</strong>.</li>
+</ul>
+<p>This is a deceptively strong design decision because it lets you control what the model sees.</p>
+<p>Examples:</p>
+<ul>
+<li>You might pass <code>_customerId=123</code> so tools can fetch details, but the agent does not receive the raw customer ID directly.</li>
+<li>You might pass <code>orderNumber=SO-91823</code> so the agent can reason and communicate using a human-friendly identifier.</li>
+</ul>
+<p>In other words, you can design event triggers that are both useful and privacy-conscious.</p>
+<h3 id="parameters-in-post-requests">Parameters in POST requests</h3>
+<p>When using HTTP POST:</p>
+<ul>
+<li>Key/value pairs are provided to tools through the tool context object.</li>
+<li>Additionally, raw JSON can be passed directly to the agent in the body.</li>
+</ul>
+<p>This gives you a practical gradient of options:</p>
+<ul>
+<li>Minimal payload: just an identifier and let tools fetch the details.</li>
+<li>Full context: include the full JSON record if you want the agent to reason over it directly.</li>
+<li>Mixed approach: provide rich context to tools, and a curated subset to the agent.</li>
+</ul>
+<p>That’s how events become “structured triggers”. You are not limited to “run this instruction”. You can pass the <em>facts</em> needed for an agent to act well.</p>
+<hr />
+<h2 id="different-agents-different-models-different-work-chaining-activity-types">Different agents, different models, different work: chaining activity types</h2>
+<p>A core strength of Orpius is that it supports multiple models and multiple agents, and it treats them as configurable execution resources. In real systems, you often want different models for different tasks:</p>
+<ul>
+<li>A lower-cost model for routine classification or triage.</li>
+<li>A more capable model for complex reasoning or high-stakes communication.</li>
+<li>A specialist model for extraction, translation, or code generation.</li>
+<li>A constrained agent persona for customer-facing responses.</li>
+<li>A higher-trust internal agent for privileged actions.</li>
+</ul>
+<p>Events are what let you stitch those together cleanly.</p>
+<p>One good mental model is:</p>
+<ul>
+<li><strong>Event</strong> = the “what happened”</li>
+<li><strong>Activity</strong> = the “what should be done”</li>
+<li><strong>Agent + Model</strong> = the “who should do it, and how capable should they be”</li>
+<li><strong>Tools</strong> = the “how it interacts with reality”</li>
+</ul>
+<p>Then chaining events gives you a modular system of delegated work where each step can run under a different capability profile.</p>
+<hr />
+<h2 id="concrete-example-a-monitoring-workflow-with-follow-up-events">Concrete example: a monitoring workflow with follow-up events</h2>
+<p>Here is a realistic pattern (similar to the monitoring example in the guide), expressed as an event-driven chain:</p>
+<h3 id="event-motiondetected">Event: <code>MotionDetected</code></h3>
+<p>Activities:</p>
+<ol>
+<li>“Snap an image from camera X and classify what triggered motion. If it is irrelevant (shadows, animals), record it and stop.”</li>
+<li>“If a person is detected, trigger <code>PersonDetected</code> and pass the confidence score and camera identifier.”</li>
+</ol>
+<h3 id="event-persondetected">Event: <code>PersonDetected</code></h3>
+<p>Activities:</p>
+<ol>
+<li>“Use ImageAnalysis again but with a stricter prompt to determine whether this is an authorised person (uniform, badge, time-of-day rules).”</li>
+<li>“If suspicious, trigger <code>SecurityAlert</code> with a short summary and a link to the stored image.”</li>
+</ol>
+<h3 id="event-securityalert">Event: <code>SecurityAlert</code></h3>
+<p>Activities:</p>
+<ol>
+<li>“Notify the on-call person and include a plain English summary.”</li>
+<li>“Write an incident report file to storage.”</li>
+<li>“If high severity, call an internal operation to initiate a phone call tree or integration with a ticketing system.”</li>
+</ol>
+<p>None of this requires you to pre-implement a bespoke workflow engine. You just define events and activities, then let Orpius handle execution, tool calls, supervision, and auditing.</p>
+<hr />
+<h2 id="why-this-matters-events-make-autonomy-operational">Why this matters: events make autonomy operational</h2>
+<p>If you step back, Orpius Events are the difference between:</p>
+<ul>
+<li>an AI assistant you have to poke repeatedly, and</li>
+<li>an AI execution layer that participates in real operations.</li>
+</ul>
+<p>Events are how external systems and internal workflows can “summon” autonomous work at the right moment, with the right constraints, and with the right audit trail.</p>
+<p>They also keep things legible. Instead of burying automation logic inside one sprawling agent prompt, you can create named events that reflect business concepts. That gives you:</p>
+<ul>
+<li>clearer operational intent</li>
+<li>easier debugging (you can inspect event activities)</li>
+<li>safer delegation (events as handover points)</li>
+<li>composability (events triggering events)</li>
+<li>and smoother evolution over time (add activities, split events, tighten parameters, rotate keys)</li>
+</ul>
+<p>And yes, it is rather grand: you end up with a system where <em>occurrences</em> become <em>triggers</em>, triggers become <em>activities</em>, activities become <em>tool-enabled work</em>, and the whole thing can cascade across agents, models, spaces, or even systems.</p>
+<hr />
+<h2 id="practical-tips-for-designing-good-event-driven-agentic-systems-in-orpius">Practical tips for designing “good” event-driven agentic systems in Orpius</h2>
+<ol>
+<li><p><strong>Name events after real-world meanings</strong>
+Prefer <code>PaymentReceived</code> over <code>Webhook1</code>.</p>
+</li>
+<li><p><strong>Keep activities single-purpose</strong>
+If one activity’s instructions become long and multi-stage, split it into multiple activities or multiple events.</p>
+</li>
+<li><p><strong>Use parameters carefully</strong>
+Put sensitive identifiers behind underscore-prefixed keys when you want tools to see them but not the agent.</p>
+</li>
+<li><p><strong>Treat events as trust boundaries</strong>
+If an external caller should not be allowed to schedule tasks or access storage, let them trigger an event that delegates to a more privileged internal activity.</p>
+</li>
+<li><p><strong>Chain events for escalation</strong>
+“Detect -&gt; verify -&gt; act” works well as event stages.</p>
+</li>
+<li><p><strong>Lean on auditing</strong>
+The audit verdict and logs are part of what makes autonomy operational rather than chaotic.</p>
+</li>
+</ol>
+<hr />
+<h2 id="closing-thought">Closing thought</h2>
+<p>In Orpius, Events are not an afterthought. They are the platform’s connective tissue: the mechanism that turns signals into autonomous execution, and individual actions into composable, secure systems.</p>
+<p>You can start with a single external event that sends a notification. But the moment you begin chaining events, passing parameters, separating trust levels, and delegating between activity types, you start building something more interesting: an agentic runtime where real work happens because the world changes, not because someone remembered to prompt a chatbot.</p>
+<p>If you want Orpius to feel like infrastructure (more like connecting to a DBMS than embedding an AI library), Events are one of the key reasons: they give your applications, your agents, and your operations a shared, explicit language for “something happened, now do the right thing”.</p>
+</article></div></div></div>
+                        <footer><div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"><div class="py-4 xl:py-8"><h2 class="text-xs uppercase tracking-wide text-gray-400">Tags</h2>
+                                    <div class="flex flex-wrap "><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/AutonomousAgents">AutonomousAgents</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/EnterpriseAI">EnterpriseAI</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Events">Events</a></span></div></div></div>
+                            <div class="pt-4 xl:pt-8"><a class="text-primary-500 hover:text-primary-400" aria-label="Back to the home" href>← Back to
+                                    the home</a></div></footer></main></main>
+
+<footer role="contentinfo"><div class="container"><small class="muted">&#xA9; 2026 Orpius. All rights reserved.</small></div></footer>
+        <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+	mermaid.initialize({ startOnLoad: true });
+</script></body></html>
