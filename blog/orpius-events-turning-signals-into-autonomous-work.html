@@ -217,7 +217,7 @@
 <h3 id="multi-agent-collaboration">Multi-agent collaboration</h3>
 <p>Even when events are currently handled by built-in agents, you can still treat each activity as a delegated unit of work. And in Orpius generally, different agents can be configured with different models, personalities, and tool permissions. The point is that events give you a clean, explicit trigger surface that can be used to route work to the right kind of execution context.</p>
 <hr />
-<h2 id="events-and-segregation-of-duties-using-less-trusted-to-trigger-more-trusted">Events and segregation of duties: using “less trusted” to trigger “more trusted”</h2>
+<h2 id="events-and-segregation-of-duties-safe-delegation-to-higher-trust-agents">Events and segregation of duties: safe delegation to higher-trust agents</h2>
 <p>One of the most practical uses of Events is security and control.</p>
 <p>In Orpius, operations exposed to external callers are deliberately locked down: tools are disabled by default because some tools are too powerful for customer-facing contexts (file access, scheduling, team notifications, and so on). That is least privilege applied properly.</p>
 <pre class="mermaid">flowchart TB
@@ -336,7 +336,7 @@
 </ul>
 <p>And yes, it is rather grand: you end up with a system where <em>occurrences</em> become <em>triggers</em>, triggers become <em>activities</em>, activities become <em>tool-enabled work</em>, and the whole thing can cascade across agents, models, spaces, or even systems.</p>
 <hr />
-<h2 id="practical-tips-for-designing-good-event-driven-agentic-systems-in-orpius">Practical tips for designing “good” event-driven agentic systems in Orpius</h2>
+<h2 id="practical-tips-for-designing-effective-event-driven-agentic-systems-in-orpius">Practical tips for designing effective event-driven agentic systems in Orpius</h2>
 <ol>
 <li><p><strong>Name events after real-world meanings</strong>
 Prefer <code>PaymentReceived</code> over <code>Webhook1</code>.</p>
