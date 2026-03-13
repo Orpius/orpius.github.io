@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><meta name="description" content="News, releases, and insights from the Orpius team.">
+    <meta name="keywords" content=".net code execution, autonomous AI agents, agency, autonomy, secure AI agents, digital coworkers, multi-step AI tasks, Orpius AI, Zero-setup AI, multi-agent system, long running tasks, back-office automation">
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPFMGFXVT2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XPFMGFXVT2');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <title>Delegating Receipt Processing to Orpius | Orpius</title></head>
+
+<body><nav class="navbar navbar-expand-md fixed-top"><div class="container align-items-center"><a class="navbar-brand d-flex align-items-center gap-2" href="/" aria-label="Home"><img src="assets/images/orpius-logo-small.png" alt="Orpius logo" class="img-fluid"></a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+		<div id="mainNav" class="collapse navbar-collapse"><ul class="navbar-nav mx-auto"><li class="nav-item"><a href="product" class="nav-link">Platform</a></li>
+				<li class="nav-item"><a href="research" class="nav-link">Research</a></li>
+				
+				
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Resources
+					</a>
+
+					<ul class="dropdown-menu shadow resources-menu" aria-labelledby="resourcesDropdown"><li><a href="docs/quickstart" class="dropdown-item fw-semibold">
+								Quick Start
+							</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/blob/main/docs/UserGuide/index.md" target="_blank" rel="noopener noreferrer">
+								Technical User Guide
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/discussions" target="_blank" rel="noopener noreferrer">
+								Forum
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK" target="_blank" rel="noopener noreferrer">
+								Orpius SDK
+							</a></li>
+						
+						<li><a href="blog" class="dropdown-item active" aria-current="page">Blog</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/tree/main/DotNet/Orpius.Platform.Sdk/Samples" target="_blank" rel="noopener noreferrer">
+								Custom Tools
+							</a></li>
+						
+						<li><a href="live-example" class="dropdown-item">Live Example</a></li></ul></li>
+
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="about" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Company
+					</a>
+					<ul class="dropdown-menu shadow" aria-labelledby="companyDropdown"><li><a href="about" class="dropdown-item">About</a></li>
+						<li><a href="partners" class="dropdown-item">Partners</a></li>
+						<li><a href="contact" class="dropdown-item">Contact</a></li>
+						<li><a href="services" class="dropdown-item">Services</a></li></ul></li></ul></div>
+
+		<div class="nav-cta d-none d-md-block"><a href="/get-started" class="button brand">Download</a></div></div></nav>
+
+<main><main class="container"><section class="hero pb-4"><div class="container"><span class="kicker">Blog</span></div></section>
+<div class="container pt-5"><div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><header class="mb-5"><div class="article-meta text-muted mb-2"><span><span class="mr-2 text-xs uppercase tracking-wide text-gray-500">Published</span>
+                <time datetime="2026-03-13T00:00:00.000">March 13, 2026</time></span>
+                           
+                            
+                    <span>By </span><span>Mia Wagner</span></div>
+                <h1 class="article-title">Delegating Receipt Processing to Orpius</h1></header></div></div>
+
+        
+                          
+    <div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><article class="article-content"><p>We've just released a short video showing what it actually looks like
+when Orpius takes ownership of routine operational work.</p>
+<p>Orpius manages the entire receipt lifecycle: extracting data,
+updating ledgers, filing documents, and sending a summary when the job is done.</p>
+<p>You can watch the video here:</p>
+<iframe width="560" height="315"
+src="https://www.youtube-nocookie.com/embed/gkenPgmbfjw?si=JgqtckphRRCV3;loop=1&vq=hd720"
+title="Autonomous Receipt Processing with Orpius"
+frameborder="0"
+referrerpolicy="strict-origin-when-cross-origin"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+<h3 id="the-problem">The Problem</h3>
+<p>In many organisations, teams are still bogged down by repetitive administrative work:</p>
+<ul>
+<li><p>scanning receipts</p>
+</li>
+<li><p>extracting amounts and dates</p>
+</li>
+<li><p>updating spreadsheets</p>
+</li>
+<li><p>organising files</p>
+</li>
+<li><p>notifying someone that the work is done</p>
+</li>
+</ul>
+<p>None of these steps are difficult, but together, they're time-consuming.
+This is exactly the kind of busywork autonomous systems like Orpius are built to take over.</p>
+<h3 id="the-scenario-set-it-and-forget-it">The Scenario: Set It and Forget It</h3>
+<p>In the video, we showcase a scheduled task called Daily Receipt Processing.</p>
+<p>Every morning at 9:00 AM, Orpius wakes up and gets to work.
+It scans the incoming folder, pulls the data, logs it in Excel, archives the files,
+and sends a summary. It runs entirely in the background without human supervision.</p>
+<h3 id="how-it-works">How it Works</h3>
+<p>We uploaded three receipts and asked Orpius a simple question: &quot;Are there any tasks scheduled for today?&quot;</p>
+<p>Orpius didn't just give us a list of scheduled task; it noticed the new files and
+asked if we wanted to process them immediately. Once we gave the green light,
+the system took over.</p>
+<ul>
+<li><p>Orpius uses another AI agent to &quot;read&quot; the receipts and turn the scanned images into structured data.</p>
+</li>
+<li><p>Once a receipt is logged in the Ledger.xlsx, Orpius moves it to a Processed folder.</p>
+</li>
+<li><p>Instead of you checking if the work is done, Orpius tells you. It send you a summary to confirming the total amount ($96) and the status of the files.</p>
+</li>
+</ul>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>While processing three receipts is a simple example,
+it demonstrates the core pillars of Orpius:</p>
+<ul>
+<li><p><strong>True Ownership</strong>: It doesn't just run a script; it manages a workflow.</p>
+</li>
+<li><p><strong>Flexibility</strong>: It integrates with your existing tools (Excel, Email, Folders).</p>
+</li>
+<li><p><strong>Intelligence</strong>: It uses AI to handle the &quot;unstructured&quot; parts of the job, like reading a blurry receipt.</p>
+</li>
+</ul>
+<h3 id="moving-toward-autonomous-operations">Moving Toward Autonomous Operations</h3>
+<p>Our goal with Orpius isn't just to automate a single click.
+It's to allow AI agents to own entire operational cycles.
+Whether it's receipts, invoices, or data entry, Orpius detects the work,
+executes the steps, and reports the outcome.</p>
+<p><strong>With systems like Orpius, operational work can finally run itself.</strong></p>
+</article></div></div></div>
+                        <footer><div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"><div class="py-4 xl:py-8"><h2 class="text-xs uppercase tracking-wide text-gray-400">Tags</h2>
+                                    <div class="flex flex-wrap "><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/AI-Automation">AI-Automation</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Autonomous-Operations">Autonomous-Operations</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Receipt-Processing">Receipt-Processing</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Operational-Automation">Operational-Automation</a></span></div></div></div>
+                            <div class="pt-4 xl:pt-8"><a class="text-primary-500 hover:text-primary-400" aria-label="Back to the home" href>← Back to
+                                    the home</a></div></footer></main></main>
+
+<footer role="contentinfo"><div class="container"><small class="muted">&#xA9; 2026 Orpius. All rights reserved.</small></div></footer>
+        <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+	mermaid.initialize({ startOnLoad: true });
+</script></body></html>
