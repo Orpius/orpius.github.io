@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><meta name="description" content="News, releases, and insights from the Orpius team.">
+    <meta name="keywords" content=".net code execution, autonomous AI agents, agency, autonomy, secure AI agents, digital coworkers, multi-step AI tasks, Orpius AI, Zero-setup AI, multi-agent system, long running tasks, back-office automation">
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPFMGFXVT2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XPFMGFXVT2');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <title>Empty title | Orpius</title></head>
+
+<body><nav class="navbar navbar-expand-md fixed-top"><div class="container align-items-center"><a class="navbar-brand d-flex align-items-center gap-2" href="/" aria-label="Home"><img src="assets/images/orpius-logo-small.png" alt="Orpius logo" class="img-fluid"></a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+		<div id="mainNav" class="collapse navbar-collapse"><ul class="navbar-nav mx-auto"><li class="nav-item"><a href="product" class="nav-link">Platform</a></li>
+				<li class="nav-item"><a href="research" class="nav-link">Research</a></li>
+				
+				
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Resources
+					</a>
+
+					<ul class="dropdown-menu shadow resources-menu" aria-labelledby="resourcesDropdown"><li><a href="docs/quickstart" class="dropdown-item fw-semibold">
+								Quick Start
+							</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/blob/main/docs/UserGuide/index.md" target="_blank" rel="noopener noreferrer">
+								Technical User Guide
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/discussions" target="_blank" rel="noopener noreferrer">
+								Forum
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK" target="_blank" rel="noopener noreferrer">
+								Orpius SDK
+							</a></li>
+						
+						<li><a href="blog" class="dropdown-item active" aria-current="page">Blog</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/tree/main/DotNet/Orpius.Platform.Sdk/Samples" target="_blank" rel="noopener noreferrer">
+								Custom Tools
+							</a></li>
+						
+						<li><a href="live-example" class="dropdown-item">Live Example</a></li></ul></li>
+
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="about" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Company
+					</a>
+					<ul class="dropdown-menu shadow" aria-labelledby="companyDropdown"><li><a href="about" class="dropdown-item">About</a></li>
+						<li><a href="partners" class="dropdown-item">Partners</a></li>
+						<li><a href="contact" class="dropdown-item">Contact</a></li>
+						<li><a href="services" class="dropdown-item">Services</a></li></ul></li></ul></div>
+
+		<div class="nav-cta d-none d-md-block"><a href="/get-started" class="button brand">Download</a></div></div></nav>
+
+<main><main class="container"><section class="hero pb-4"><div class="container"><span class="kicker">Blog</span></div></section>
+<div class="container pt-5"><div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><header class="mb-5"><div class="article-meta text-muted mb-2"><span><span class="mr-2 text-xs uppercase tracking-wide text-gray-500">Published</span>
+                <time datetime="2026-03-16T11:13:11.783&#x2B;00:00">March 16, 2026</time></span>
+                           
+                            
+                    <span>By </span></div>
+                <h1 class="article-title">Empty title</h1></header></div></div>
+
+        
+                          
+    <div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><article class="article-content"><p>While Orpius allows for the immediate delegation of tasks to AI agents,
+its true power lies in handling complex autonomous operations, specifically those that span
+disconnected systems and fragmented data sources. Most organizations
+operate across many separate systems that do not communicate
+with each other and coordinating work across them is often complex.
+Orpius flips this by making it straightforward to orchestrate work across these systems.</p>
+<p>In this post, however, we focus on the concept of connecting Orpius to external systems,
+specifically your applications. The goal is to explain how this integration fits into the
+overall architecture rather than walk through the full implementation.
+While these capabilities are closely related,
+configuring complex multi-system operations will be covered in future articles.</p>
+<h2 id="the-orpius-development-engine">The Orpius Development Engine</h2>
+<p>Because the platform is designed to connect with external systems, developers can integrate
+Orpius directly into their own applications. This provides a fast way to add AI-enabled capabilities
+to both existing and new software. Instead of building their own
+orchestration layer for autonomous operations, developers can rely on Orpius as the
+underlying execution engine and focus on the domain-specific capabilities of their solution.</p>
+<h2 id="what-this-article-covers">What This Article Covers</h2>
+<p>This article introduces the concepts behind integrating applications with the Orpius engine.
+Because this model is different from how AI systems are typically built today,
+the goal of this article is to introduce the core concepts and help you understand how applications
+interact with the Orpius platform.</p>
+<p>The full step-by-step implementation, including sample projects and configuration details,
+is covered in the <a href="https://github.com/Orpius/SDK/blob/main/docs/DevelopmentGuides/DotNet/index.md">Orpius SDK Developer Guide</a>.</p>
+<h2 id="how-orpius-differs-from-agent-frameworks">How Orpius Differs from Agent Frameworks</h2>
+<p>Frameworks like LangChain, CrewAI, or Microsoft Agent Framework (MAF)
+provide useful tools for building agent workflows and experimenting with multi-agent systems.</p>
+<p>However, these frameworks usually operate as libraries embedded inside an application runtime.
+Developers must still design how agents coordinate work, how tasks persist
+over time, how operations span multiple systems etc.</p>
+<p>This means that, when using these frameworks, developers are still burdened with building and
+maintaining the infrastructure required to support them. Orpius shifts this responsibility
+from the application code to the platform layer.</p>
+<h3 id="dbms-style-mental-model">DBMS-style mental model</h3>
+<p>Think of Orpius as the PostgreSQL of autonomous operations.</p>
+<p>Traditionally, you don't build a storage engine from scratch; you install a DBMS to handle
+concurrency, indexing, and security. You simply issue queries. Orpius provides that same structural
+foundation for AI. Instead of managing the &quot;how&quot; of agent coordination and state persistence,
+you define your agents and tools, and let the Orpius engine handle the execution.</p>
+<h2 id="integrating-applications-with-the-orpius-engine">Integrating Applications with the Orpius Engine</h2>
+<p>Integrating an application with Orpius usually means placing Orpius behind your
+own application layer.</p>
+<p>A typical setup looks like this:</p>
+<ul>
+<li><p>your client application sends a request to your own middleware</p>
+</li>
+<li><p>the middleware calls Orpius using an Operation*</p>
+</li>
+<li><p>Orpius coordinates the agent and any required tools</p>
+</li>
+<li><p>responses stream back through the middleware to the client</p>
+</li>
+</ul>
+<p>This creates a clean separation between the user-facing application, your server-side logic, and the Orpius engine.</p>
+<p>That separation matters. It allows you to keep credentials and security decisions on your side, enrich requests with application-specific context, and expose only the capabilities you want agents to use.</p>
+<p>This is also why Orpius works well as a development engine.
+Rather than embedding orchestration directly inside the application, developers connect their
+software to Orpius and let the engine coordinate the agent side of the work.
+The application can then provide selected capabilities back to Orpius as tools,
+allowing agents to interact with real systems in a controlled way.</p>
+<p>Integration with existing applications is lightweight. You simply expose selected capabilities
+by decorating classes and methods with attributes.</p>
+<p>For detailed .NET implementation, sample code, and configuration steps, see the
+<a href="https://github.com/Orpius/SDK/blob/main/docs/DevelopmentGuides/DotNet/index.md">Orpius SDK Developer Guide</a>.</p>
+<p>The guide uses the Orpius SDK for .NET because it provides the quickest way to get started.
+Support for other platforms, including Java, is coming soon. The SDKs are not strictly required,
+however. Orpius communicates using open protocols such as gRPC and Protocol Buffers, which means it
+can be integrated from virtually any language. The SDK simply makes the process easier and aligns with the examples in the developer guide.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Orpius changes how AI-enabled systems are built. At first this model may feel unfamiliar,
+and developers might assume they are giving up control. In reality, the opposite is true. Orpius
+allows you to enable AI in your applications while keeping full control over your code, services,
+and data.</p>
+<p>The integration is intentionally lightweight and unobtrusive.
+Because the orchestration layer lives in the Orpius engine, you do not need to build or maintain
+that infrastructure yourself.</p>
+<p>If anything here is unclear, feel free to contact us. We are happy to help.</p>
+</article></div></div></div>
+                        <footer><div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"><div class="py-4 xl:py-8"><h2 class="text-xs uppercase tracking-wide text-gray-400">Tags</h2>
+                                    <div class="flex flex-wrap "></div></div></div>
+                            <div class="pt-4 xl:pt-8"><a class="text-primary-500 hover:text-primary-400" aria-label="Back to the home" href>← Back to
+                                    the home</a></div></footer></main></main>
+
+<footer role="contentinfo"><div class="container"><small class="muted">&#xA9; 2026 Orpius. All rights reserved.</small></div></footer>
+        <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+	mermaid.initialize({ startOnLoad: true });
+</script></body></html>
