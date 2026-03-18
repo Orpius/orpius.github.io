@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><meta name="description" content="News, releases, and insights from the Orpius team.">
+    <meta name="keywords" content=".net code execution, autonomous AI agents, agency, autonomy, secure AI agents, digital coworkers, multi-step AI tasks, Orpius AI, Zero-setup AI, multi-agent system, long running tasks, back-office automation">
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPFMGFXVT2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XPFMGFXVT2');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <title>How Orpius Supports Compliance-Ready AI Collaboration | Orpius</title></head>
+
+<body><nav class="navbar navbar-expand-md fixed-top"><div class="container align-items-center"><a class="navbar-brand d-flex align-items-center gap-2" href="/" aria-label="Home"><img src="assets/images/orpius-logo-small.png" alt="Orpius logo" class="img-fluid"></a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+		<div id="mainNav" class="collapse navbar-collapse"><ul class="navbar-nav mx-auto"><li class="nav-item"><a href="product" class="nav-link">Platform</a></li>
+				<li class="nav-item"><a href="research" class="nav-link">Research</a></li>
+				
+				
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Resources
+					</a>
+
+					<ul class="dropdown-menu shadow resources-menu" aria-labelledby="resourcesDropdown"><li><a href="docs/quickstart" class="dropdown-item fw-semibold">
+								Quick Start
+							</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/blob/main/docs/UserGuide/index.md" target="_blank" rel="noopener noreferrer">
+								Technical User Guide
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/discussions" target="_blank" rel="noopener noreferrer">
+								Forum
+							</a></li>
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK" target="_blank" rel="noopener noreferrer">
+								Orpius SDK
+							</a></li>
+						
+						<li><a href="blog" class="dropdown-item active" aria-current="page">Blog</a></li>
+
+
+						<li><a class="dropdown-item" href="https://github.com/Orpius/SDK/tree/main/DotNet/Orpius.Platform.Sdk/Samples" target="_blank" rel="noopener noreferrer">
+								Custom Tools
+							</a></li>
+						
+						<li><a href="live-example" class="dropdown-item">Live Example</a></li></ul></li>
+
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="about" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Company
+					</a>
+					<ul class="dropdown-menu shadow" aria-labelledby="companyDropdown"><li><a href="about" class="dropdown-item">About</a></li>
+						<li><a href="partners" class="dropdown-item">Partners</a></li>
+						<li><a href="contact" class="dropdown-item">Contact</a></li>
+						<li><a href="services" class="dropdown-item">Services</a></li></ul></li></ul></div>
+
+		<div class="nav-cta d-none d-md-block"><a href="/get-started" class="button brand">Download</a></div></div></nav>
+
+<main><main class="container"><section class="hero pb-4"><div class="container"><span class="kicker">Blog</span></div></section>
+<div class="container pt-5"><div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><header class="mb-5"><div class="article-meta text-muted mb-2"><span><span class="mr-2 text-xs uppercase tracking-wide text-gray-500">Published</span>
+                <time datetime="2026-03-18T00:00:00.000">March 18, 2026</time></span>
+                           
+                            
+                    <span>By </span><span>Mia Wagner</span></div>
+                <h1 class="article-title">How Orpius Supports Compliance-Ready AI Collaboration</h1></header></div></div>
+
+        
+                          
+    <div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><article class="article-content"><p>There is a large potential for AI to streamline complex decisions, like coordinating between
+a doctor’s clinic and an insurance provider. But there’s a massive data wal in the way: <strong>Privacy</strong>.</p>
+<p>We recently published a paper, <strong>&quot;Distributed Agent Reasoning Across Independent Systems With Strict Data Locality,</strong>&quot;
+which demonstrates a way to break through those walls. We’ve built a system where AI agents
+from different organizations can collaborate to solve a problem without ever seeing each other’s
+private data.</p>
+<h2 id="the-problem-data-that-cannot-be-shared">The Problem: Data That Cannot Be Shared</h2>
+<p>In a perfect world, if you want an AI to help with a medical insurance claim, you'd simply
+feed all the data—patient records, insurance policies, and clinical guidelines—into one big pot where a
+model can reason over it.</p>
+<p>However, regulatory walls make this impossible. Patient data cannot simply be moved, merged, or exported.</p>
+<p>Eveven though multiple organizations possess the information needed to solve a
+problem, no single system can legally or operationally access all of it.
+This creates a deadlock where high-value automation stalls because the data is stuck behind a
+firewall.</p>
+<h2 id="the-orpius-solution-reasoning-instead-of-sharing">The Orpius Solution: Reasoning Instead of Sharing</h2>
+<p>Instead of attempting to centralize data, Orpius allows for a distributed network of specialized agents.
+In our research, we modeled a three-way interaction between a Clinic Agent, an Insurer Agent, and a Specialist Agent.
+The breakthrough isn't just that they talk to each other, it’s how they collaborate:</p>
+<ul>
+<li><p><strong>Strict Data Locality</strong>: Every agent lives on its own &quot;island.&quot; No raw records ever leave their home
+server.</p>
+</li>
+<li><p><strong>Digital Handshake</strong>: To ensure the agents are talking about the same case without knowing who
+that person is, we use a unique &quot;digital handshake.&quot; They can verify they are looking at the same
+file without ever exchanging a name or ID.</p>
+</li>
+<li><p><strong>Natural Language Summaries</strong>: Instead of exchanging rigid, data-heavy tables, our agents communicate
+via concise natural language. This need-to-know messaging prevents accidental data leakage
+while keeping the reasoning human-readable.</p>
+</li>
+</ul>
+<h3 id="does-it-actually-work">Does it actually work?</h3>
+<p>We showed that these agents could successfully navigate a Clinical-to-Insurer workflow.</p>
+<ul>
+<li><p>The Clinic identified the medical need.</p>
+</li>
+<li><p>The Insurer verified the anonymous patient's plan.</p>
+</li>
+<li><p>The Specialist gave a thumbs-up on the clinical appropriateness.</p>
+</li>
+</ul>
+<p>The Final Verdict was delivered back to the user all without a single piece of PII
+(Personally Identifiable Information) crossing a boundary.</p>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>This isn't just a healthcare fix. This architecture provides a blueprint for any industry where
+data is siloed. Imagine:</p>
+<p><strong>Supply Chains</strong>: Multiple companies coordinating logistics without revealing their full inventory
+to competitors.</p>
+<p><strong>Banking</strong>: Detecting fraud across different institutions without sharing private customer lists.</p>
+<p>We are moving away from the era of &quot;Centralized AI&quot; and toward Federated Reasoning.
+It’s a world where AI doesn't need to &quot;own&quot; your data to be helpful, it just needs to know how to
+ask the right questions.</p>
+</article></div></div></div>
+                        <footer><div class=" text-sm font-medium leading-5 divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y"><div class="py-4 xl:py-8"><h2 class="text-xs uppercase tracking-wide text-gray-400">Tags</h2>
+                                    <div class="flex flex-wrap "><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/AI-Automation">AI-Automation</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Autonomous-Operations">Autonomous-Operations</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Receipt-Processing">Receipt-Processing</a></span><span class="badge-topic ms-1"><a class="text-primary-600 hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="tags/Operational-Automation">Operational-Automation</a></span></div></div></div>
+                            <div class="pt-4 xl:pt-8"><a class="text-primary-500 hover:text-primary-400" aria-label="Back to the home" href>← Back to
+                                    the home</a></div></footer></main></main>
+
+<footer role="contentinfo"><div class="container"><small class="muted">&#xA9; 2026 Orpius. All rights reserved.</small></div></footer>
+        <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+	mermaid.initialize({ startOnLoad: true });
+</script></body></html>

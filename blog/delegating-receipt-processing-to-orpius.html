@@ -91,7 +91,7 @@
         
                           
     <div class="row justify-content-center"><div class="col-lg-9 col-xl-8"><article class="article-content"><p>We've just released a short video showing what it actually looks like
-when Orpius takes ownership of routine operational work.</p>
+when Orpius takes ownership of ongoing routine work.</p>
 <p>Orpius manages the entire receipt lifecycle: extracting data,
 updating ledgers, filing documents, and sending a summary when the job is done.</p>
 <p>You can watch the video here:</p>
@@ -124,7 +124,66 @@ This is exactly the kind of busywork autonomous systems like Orpius are built to
 <p>Every morning at 9:00 AM, Orpius wakes up and gets to work.
 It scans the incoming folder, pulls the data, logs it in Excel, archives the files,
 and sends a summary. It runs entirely in the background without human supervision.</p>
+<h3 id="how-was-the-task-initially-set-up">How Was the Task Initially Set Up</h3>
+<p>Although Orpius could execute this task using a single agent, we deliberately
+split the task between two agents. We delegated the data
+extraction step to another agent using a more cost-efficient model.</p>
+<p>In our example:</p>
+<p>Gemini 2.5 Flash is used for receipt data extraction</p>
+<p>Gemini 3 Flash is used for the broader task execution</p>
+<p>Agent collaboration is central to Orpius. You can assign the most appropriate agent to each part of a task, resulting in efficient and cost-effective execution.</p>
+<h4 id="agent-to-agent-delegation-with-operations">Agent-to-Agent Delegation with Operations</h4>
+<p>To enable this, we created an Operation.</p>
+<p>Operations allow agents to delegate work to other agents.
+They can be called internally by other agents, or externally by applications and services
+integrating with Orpius.</p>
+<h4 id="step-1-create-an-operation">Step 1: Create an Operation</h4>
+<p>This Operation is responsible only for extracting data from receipt images.</p>
+<ol>
+<li><p>Open <strong>Operations</strong>.</p>
+</li>
+<li><p>Select <strong>Add (+)</strong>.</p>
+</li>
+<li><p>Enter <strong>Operation name</strong> for exampe: <code>FileContentEnquiries</code></p>
+</li>
+<li><p>Choose the <strong>Agent</strong> that will handle requests. This can use a cost-efficient model (for example, Gemini 2.5 Flash), but you should always test whether the model is capable of handling the task. You can switch to a more capable model if needed.</p>
+</li>
+<li><p>Enter <strong>Instructions to Agent:</strong></p>
+<blockquote>
+<p>&quot;You will receive a request to extract data from a financial receipt represented as an image.
+Use the ImageAnalysis tool to understand the content of the receipt and extract the data.
+Return the extracted data as JSON&quot;.</p>
+</blockquote>
+</li>
+<li><p>Enable the <strong>Image Analysis tool</strong> (Only enable the tools the operation really needs. Tools are disabled by default for safety.)</p>
+</li>
+<li><p>Save, then copy the <strong>External ID.</strong></p>
+</li>
+</ol>
+<h4 id="step-2-create-the-scheduled-task-via-chat">Step 2: Create the Scheduled Task via Chat</h4>
+<ol>
+<li>Enter instructions to Agent:</li>
+</ol>
+<blockquote>
+<p>&quot;Every day at 9:00 AM:</p>
+<ol>
+<li>List all files in the Receipts folder.</li>
+<li>If the folder is empty, send a notification to me.</li>
+<li>For each file:
+<ul>
+<li>Call the internal Operation (paste the <strong>External ID</strong>) using the file path as input.</li>
+<li>Extract the data from the JSON response.</li>
+<li>Append the extracted data (Date, Item, Price, Tax, Total, Category, and filename) to Ledger.xlsx.</li>
+<li>Move the processed file to the Processed folder.</li>
+</ul>
+</li>
+<li>Calculate the total sum of the Total column for the processed batch.</li>
+<li>Send a notification to me with the total sum&quot;.</li>
+</ol>
+</blockquote>
 <h3 id="how-it-works">How it Works</h3>
+<p>The task is configured to run automatically every day at 9:00 AM.</p>
+<p>For the purpose of the demonstration, we triggered it manually.</p>
 <p>We uploaded three receipts and asked Orpius a simple question: &quot;Are there any tasks scheduled for today?&quot;</p>
 <p>Orpius didn't just give us a list of scheduled task; it noticed the new files and
 asked if we wanted to process them immediately. Once we gave the green light,
