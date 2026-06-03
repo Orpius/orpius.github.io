@@ -776,3 +776,18 @@ footer {
 	border-radius: 1rem;
 	background: var(--surface-solid);
 }
+blockquote {
+	margin: 1.5rem 0;
+	padding: 1rem 1.25rem;
+	border-left: 4px solid var(--bs-primary);
+	background-color: var(--bs-light);
+	border-radius: 0.25rem;
+}
+
+	blockquote p {
+		margin-bottom: 0;
+	}
+
+	blockquote strong {
+		font-style: normal;
+	}
