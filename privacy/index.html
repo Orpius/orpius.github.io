@@ -383,6 +383,9 @@
 							— allows Orpius to check free/busy availability
 							on calendars the user can access.
 						</li>
+						<li><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code>
+							— allows Orpius to retrieve the list of calendars available to the user, including calendar names, identifiers and access permissions, so the assistant can identify calendars without requiring users to supply Calendar IDs manually.
+						</li>
 						<li><code>https://www.googleapis.com/auth/calendar.events.owned</code>
 							— allows Orpius to view, create, modify and delete
 							events on calendars owned by the user.
@@ -463,10 +466,11 @@
 					</p>
 
 					<p>
-						Calendar information may be included in conversation
-						histories, assistant responses or records of
-						authorised actions. This information is subject
-						to the applicable retention and deletion rules.
+						Orpius does not collect, aggregate or anonymise Google Calendar data for analytics, profiling, advertising or model training.
+
+						Calendar information may be temporarily retained in conversation histories and operational logs as part of providing and maintaining the Service. Assistants may also retain relevant information in memories, either at the user's request or through their configured memory capabilities, to support future interactions.
+
+						Such information is subject to the applicable retention, protection and deletion policies described in Section 9.
 					</p>
 
 					<h3>4.5 Revoking access and requesting deletion</h3>
